@@ -1,0 +1,31 @@
+package com.anon.aocrefactor.inspection;
+
+import com.anon.aocrefactor.quickfix.ReplaceConditionalOperatorQuickFix;
+import com.intellij.codeInspection.*;
+import com.intellij.psi.*;
+import org.jetbrains.annotations.NotNull;
+
+public class ConditionalOperatorInspection extends AbstractBaseJavaLocalInspectionTool {
+
+    @Override
+    public @NotNull PsiElementVisitor buildVisitor(
+            @NotNull ProblemsHolder holder,
+            boolean isOnTheFly) {
+
+        return new JavaElementVisitor() {
+            @Override
+            public void visitConditionalExpression(
+                    @NotNull PsiConditionalExpression expression) {
+                super.visitConditionalExpression(expression);
+                holder.registerProblem(
+                        expression,
+                        "Confusion atom: conditional operator (?:). Consider using if-else.",
+                        ProblemHighlightType.WARNING,
+                        new ReplaceConditionalOperatorQuickFix()
+                );
+            }
+        };
+
+    }
+
+}
