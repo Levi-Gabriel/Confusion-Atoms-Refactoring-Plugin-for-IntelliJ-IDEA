@@ -4,37 +4,16 @@ An IntelliJ IDEA extension developed as part of the research project **"To Refac
 
 The plugin detects and refactors *Atoms of Confusion* (ACs) in Java source code using PSI-based semantic analysis via the JetBrains Plugin SDK.
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Implementation](#implementation)
-- [Implemented Atoms](#implemented-atoms)
-  1. [Conditional Operator](#1-conditional-operator)
-  2. [Infix Operator Precedence](#2-infix-operator-precedence)
-  3. [Pre-Increment / Pre-Decrement](#3-pre-increment--pre-decrement)
-  4. [Post-Increment / Post-Decrement](#4-post-increment--post-decrement)
-  5. [Arithmetic as Logic](#5-arithmetic-as-logic)
-  6. [Type Conversion](#6-type-conversion)
-  7. [Omitted Curly Braces](#7-omitted-curly-braces)
-  8. [Logic as Control Flow](#8-logic-as-control-flow)
-  9. [Change of Literal Encoding](#9-change-of-literal-encoding)
-- [Technical Approach](#technical-approach)
-- [Related Work](#related-work)
-- [License](#license)
-
 ## Overview
 
 Atoms of Confusion are the smallest syntactic code patterns that are formally correct but commonly misinterpreted by developers. This plugin provides IDE-assisted detection and refactoring of nine selected ACs directly within IntelliJ IDEA, offering real-time warnings and quick fixes without requiring external tools.
 
 ## Requirements
 
-| Requirement | Version |
-|---|---|
-| IntelliJ IDEA (Community or Ultimate) | 2023.3+ |
-| JDK | 17+ |
+| Requirement | Version             |
+|---|---------------------|
+| IntelliJ IDEA (Community or Ultimate) | 2024.2+             |
+| JDK | 17+                 |
 | Gradle | managed via wrapper |
 
 ## Installation
