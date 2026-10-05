@@ -21,8 +21,11 @@ public class AddCurlyBracesQuickFix implements LocalQuickFix {
 
     @Override
     public void applyFix(@NotNull Project project, @NotNull ProblemDescriptor descriptor) {
+
         PsiElement element = descriptor.getPsiElement();
-        if (!(element instanceof PsiStatement branch) || !branch.isValid()) return;
+
+        if (!(element instanceof PsiStatement branch)) return;
+        if (!branch.isValid()) return;
 
         if (branch instanceof PsiBlockStatement) return; // já tem chaves, nada a fazer
 

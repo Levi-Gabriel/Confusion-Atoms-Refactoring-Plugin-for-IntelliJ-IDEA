@@ -1,24 +1,25 @@
 package com.anon.aocrefactor.inspection;
 
 import com.anon.aocrefactor.quickfix.ReplaceLogicAsControlFlow;
+import com.anon.aocrefactor.util.ExpressionUtils;
 import com.anon.aocrefactor.util.OperatorUtils;
 import com.intellij.codeInspection.AbstractBaseJavaLocalInspectionTool;
+import com.intellij.codeInspection.LocalQuickFix;
 import com.intellij.codeInspection.ProblemHighlightType;
 import com.intellij.codeInspection.ProblemsHolder;
 import com.intellij.psi.*;
 import com.intellij.psi.tree.IElementType;
 import com.intellij.psi.util.PsiTreeUtil;
-import com.intellij.psi.util.PsiUtil;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 public class LogicAsControlFlowInspection extends AbstractBaseJavaLocalInspectionTool {
 
-    // Usado pelo mecanismo de supressão via comentário
-    // "// noinspection LogicAsControlFlow" inserido pelo próprio quick fix
-    // quando ele decide apenas lançar um comentário em vez de refatorá-lo.
     public static final String SHORT_NAME = "LogicAsControlFlow";
+
+    private static final String MESSAGE = "Logic as Control Flow atom detected: short-circuit evaluation "
+            + "masks conditional execution. Consider refactoring into an explicit control flow statement.";
 
     @Override
     public @NotNull String getShortName() {
@@ -26,99 +27,67 @@ public class LogicAsControlFlowInspection extends AbstractBaseJavaLocalInspectio
     }
 
     @Override
-    public @NotNull PsiElementVisitor buildVisitor(
-            @NotNull ProblemsHolder holder,
-            boolean isOnTheFly) {
-
+    public @NotNull PsiElementVisitor buildVisitor(@NotNull ProblemsHolder holder, boolean isOnTheFly) {
         return new JavaElementVisitor() {
 
             @Override
             public void visitBinaryExpression(@NotNull PsiBinaryExpression expression) {
                 super.visitBinaryExpression(expression);
-                checkLogicAsControlFlow(expression, holder);
+                check(expression);
             }
 
             @Override
             public void visitPolyadicExpression(@NotNull PsiPolyadicExpression expression) {
                 super.visitPolyadicExpression(expression);
-                // Evita duplo processamento já que PsiBinaryExpression herda de PsiPolyadicExpression
-                if (expression instanceof PsiBinaryExpression) return;
-                checkLogicAsControlFlow(expression, holder);
+                // PsiBinaryExpression inherits from PsiPolyadicExpression
+                // avoids double processing.
+                if (!(expression instanceof PsiBinaryExpression)) check(expression);
             }
 
-            private void checkLogicAsControlFlow(PsiExpression expression, ProblemsHolder holder) {
+            private void check(PsiExpression expression) {
                 IElementType op = OperatorUtils.getOperator(expression);
 
-                if (op == null || !OperatorUtils.isLogicalOperator(op)) return;
-
-                // Evita alertas duplicados em sub-árvores lógicas aninhadas
-                // delega o warning para o nó raiz da expressão lógica
-                if (isRootLogicalExpression(expression)) return;
+                if (op == null) return;
+                if(!OperatorUtils.isLogicalOperator(op)) return;
+                if (isSecondaryOperand(expression)) return;
 
                 List<PsiExpression> operands = OperatorUtils.getOperands(expression);
-                if (operands.size() < 2) return;
+                if (operands.stream().skip(1).noneMatch(this::containsSideEffectOrComputation)) return;
 
-                for (int i = 1; i < operands.size(); i++) {
-                    PsiExpression dependentOperand = operands.get(i);
-                    if (containsSideEffectOrComputation(dependentOperand)) {
-                        holder.registerProblem(
-                                expression,
-                                "Logic as Control Flow atom detected: short-circuit evaluation masks conditional execution. Consider refactoring into an explicit control flow statement.",
-                                ProblemHighlightType.WARNING,
-                                new ReplaceLogicAsControlFlow()
-                        );
-                        return; // Dispara um único aviso para a expressão lógica completa
-                    }
+                // Sem fix quando nenhuma refatoração segura existe: o aviso continua, o fix não aparece.
+                LocalQuickFix[] fixes;
+                if (ReplaceLogicAsControlFlow.isApplicable(expression)) {
+                    fixes = new LocalQuickFix[]{new ReplaceLogicAsControlFlow()};
+                } else {
+                    fixes = LocalQuickFix.EMPTY_ARRAY;
                 }
+                holder.registerProblem(expression, MESSAGE, ProblemHighlightType.WARNING, fixes);
             }
 
-            // Verifica se a expressão atual é um operando secundário (não o primeiro)
-            // dentro de uma expressão lógica pai, indicando que o processamento deve ser
-            // delegado para o nó pai para evitar alertas duplicados.
-
-            private boolean isRootLogicalExpression(PsiExpression expression) {
-
-                PsiElement immediateChild;
-
-                if (expression.getParent() instanceof PsiParenthesizedExpression paren) {
-                    immediateChild = paren;
-                } else {
-                    immediateChild = expression;
-                }
-
-                // Sobe um nó pulando eventuais parênteses para encontrar o nó pai real.
-                PsiElement parent = PsiUtil.skipParenthesizedExprUp(expression.getParent());
-
-                if (!(parent instanceof PsiExpression parentExpr)) return false;
-                if (!OperatorUtils.isLogicalOperator(OperatorUtils.getOperator(parentExpr))) return false;
-
-                List<PsiExpression> parentOperands = OperatorUtils.getOperands(parentExpr);
-                int index = parentOperands.indexOf(immediateChild);
-                return index >= 1;
+            // Operando não-inicial de uma expressão lógica pai: o aviso é delegado ao nó pai.
+            private boolean isSecondaryOperand(PsiExpression expression) {
+                PsiElement outermost = ExpressionUtils.climbParens(expression);
+                if (!(outermost.getParent() instanceof PsiExpression parent)) return false;
+                if (!OperatorUtils.isLogicalOperator(OperatorUtils.getOperator(parent))) return false;
+                return OperatorUtils.getOperands(parent).indexOf(outermost) >= 1;
             }
 
             private boolean containsSideEffectOrComputation(PsiExpression operand) {
                 if (isSideEffectOrComputation(operand)) return true;
-
-                // Busca recursiva na árvore do operando por invocações, atribuições, mutações ou instanciações
-                // cima -> baixo
                 return PsiTreeUtil.findChildrenOfAnyType(
-                        operand,
-                        PsiCallExpression.class,
-                        PsiAssignmentExpression.class,
-                        PsiUnaryExpression.class
-                ).stream().anyMatch(this::isSideEffectOrComputation);
+                                operand,
+                                PsiCallExpression.class,
+                                PsiAssignmentExpression.class,
+                                PsiUnaryExpression.class)
+                        .stream().anyMatch(this::isSideEffectOrComputation);
             }
-
 
             private boolean isSideEffectOrComputation(PsiElement element) {
-                if (element instanceof PsiCallExpression) return true;
-                if (element instanceof PsiAssignmentExpression) return true;
-                if (element instanceof PsiUnaryExpression unary) {
-                    return OperatorUtils.isIncrementOrDecrement(unary.getOperationTokenType());
-                }
-                return false;
+                if (element instanceof PsiCallExpression || element instanceof PsiAssignmentExpression) return true;
+                if (!(element instanceof PsiUnaryExpression unary)) return false;
+                return OperatorUtils.isIncrementOrDecrement(unary.getOperationTokenType());
             }
+
         };
     }
 }

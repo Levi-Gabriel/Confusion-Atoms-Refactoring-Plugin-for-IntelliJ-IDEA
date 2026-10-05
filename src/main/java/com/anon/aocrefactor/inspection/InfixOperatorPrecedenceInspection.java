@@ -26,6 +26,7 @@ public class InfixOperatorPrecedenceInspection extends AbstractBaseJavaLocalInsp
         };
     }
 
+    @SuppressWarnings("LogicAsControlFlow")
     private void checkExpression(PsiExpression expression, ProblemsHolder holder) {
 
         IElementType op = OperatorUtils.getOperator(expression);
@@ -56,7 +57,7 @@ public class InfixOperatorPrecedenceInspection extends AbstractBaseJavaLocalInsp
             }
         }
 
-        //caso aritmético
+        //arithmetic case
         if (!arithmeticMismatches.isEmpty()) {
             holder.registerProblem(
                     expression,
@@ -66,7 +67,7 @@ public class InfixOperatorPrecedenceInspection extends AbstractBaseJavaLocalInsp
             );
         }
 
-        // caso lógico
+        // logic case
         if (!logicalMismatches.isEmpty()) {
             holder.registerProblem(
                     expression,

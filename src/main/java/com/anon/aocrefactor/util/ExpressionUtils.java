@@ -121,5 +121,12 @@ public final class ExpressionUtils {
 
         return "0b" + binaryDigits + (isLong ? String.valueOf(suffix) : "");
     }
+    public static PsiElement climbParens(PsiElement element) {
+        PsiElement current = element;
+        while (current.getParent() instanceof PsiParenthesizedExpression parenthesized) {
+            current = parenthesized;
+        }
+        return current;
+    }
 
 }

@@ -38,7 +38,7 @@ public class ReplaceConditionalOperatorQuickFix implements LocalQuickFix {
 
         PsiElementFactory factory = JavaPsiFacade.getElementFactory(project);
 
-        // Caso 1: int x = cond ? a : b;
+        // Case 1: int x = cond ? a : b;
         if (parentStatement instanceof PsiDeclarationStatement declStmt) {
             PsiLocalVariable var = (PsiLocalVariable)
                     declStmt.getDeclaredElements()[0];
@@ -62,7 +62,7 @@ public class ReplaceConditionalOperatorQuickFix implements LocalQuickFix {
             parent.addBefore(ifElse, parentStatement);
             parentStatement.delete();
 
-            // Caso 2: return cond ? a : b;
+        // Case 2: return cond ? a : b;
         } else if (parentStatement instanceof PsiReturnStatement) {
             String ifElseText = String.format(
                     "if (%s) { return %s; } else { return %s; }",
@@ -73,7 +73,7 @@ public class ReplaceConditionalOperatorQuickFix implements LocalQuickFix {
             PsiStatement ifElse = factory.createStatementFromText(ifElseText, null);
             parentStatement.replace(ifElse);
 
-            // Caso 3: genérico — ternário dentro de expressão (ex: println(cond ? a : b))
+            // Case 3: generic — ternary within an expression (e.g., println(cond ? a : b))
         } else {
             PsiType type = ternary.getType();
             String typeName = (type != null) ? type.getPresentableText() : "Object";

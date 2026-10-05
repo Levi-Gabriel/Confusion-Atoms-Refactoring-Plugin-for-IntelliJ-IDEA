@@ -39,7 +39,8 @@ public class ReplaceTypeConversionQuickFix implements LocalQuickFix {
     public void applyFix(@NotNull Project project,
                          @NotNull ProblemDescriptor descriptor) {
         PsiElement element = descriptor.getPsiElement();
-        if(!(element instanceof PsiTypeCastExpression castExpr) || !castExpr.isValid()) return;
+        if (!(element instanceof PsiTypeCastExpression castExpr)) return;
+        else if (!castExpr.isValid()) return;
 
         PsiTypeElement castTypeElement = castExpr.getCastType();
         PsiType castType = castTypeElement != null
@@ -66,17 +67,19 @@ public class ReplaceTypeConversionQuickFix implements LocalQuickFix {
                 fromType, toType
         );
         PsiComment descriptiveComment = factory.createCommentFromText(commentText, null);
-        // Sem supressão, o warning continua ativo mesmo após o comentário.
-        // Este modo é documental, não altera comportamento nem silencia a inspeção.
+        // Without suppression, the warning remains active even after the comment.
+        // This mode is for documentation purposes; it neither alters behavior nor silences the inspection.
 
-        // Caso 1: cast dentro de um statement normal (método, bloco, etc.)
+        // Case 1: cast within a standard statement (method, block, etc.)
+
+
         PsiStatement parentStatement = PsiTreeUtil.getParentOfType(castExpr, PsiStatement.class);
         if (parentStatement != null) {
             insertBefore(parserFacade, parentStatement.getParent(), parentStatement, descriptiveComment);
             return;
         }
 
-        // Caso 2: cast dentro de um inicializador de campo (sem statement ancestral)
+        // Case 2: cast within a field initializer (no ancestor statement)
         PsiField enclosingField = PsiTreeUtil.getParentOfType(castExpr, PsiField.class);
         if (enclosingField != null) {
             insertBefore(parserFacade, enclosingField.getParent(), enclosingField, descriptiveComment);
@@ -106,7 +109,7 @@ public class ReplaceTypeConversionQuickFix implements LocalQuickFix {
         );
         PsiExpression clampedExpr = factory.createExpressionFromText(clampedText, operand);
         operand.replace(clampedExpr);
-        // A inspeção agora reconhece esse padrão estruturalmente e não vai mais marcar o warning.
+    // The inspection now recognizes this pattern structurally and will no longer flag the warning.
     }
 
     private void applyWrapMathFloor(Project project, PsiExpression operand, PsiType castType) {
@@ -130,13 +133,12 @@ public class ReplaceTypeConversionQuickFix implements LocalQuickFix {
         PsiExpression floorCall = factory.createExpressionFromText(
                 "Math.floor(" + operandText + ")", operand
         );
-
         operand.replace(floorCall);
-        // Math.floor já está em SAFE_CONVERSION_METHODS na inspeção, então o warning
-        // já some sozinho na próxima análise.
+        // Math.floor is already in SAFE_CONVERSION_METHODS for the inspection, so the warning
+        // will disappear on its own during the next analysis.
     }
 
-    // Retorna {constante mínima, constante máxima} pro tipo alvo, ou null se não aplicável
+    // Returns {minimum constant, maximum constant} for the target type, or null if not applicable
     private String[] rangeConstantsFor(PsiType targetType) {
         return switch (targetType.getCanonicalText()) {
             case "byte"  -> new String[]{"Byte.MIN_VALUE", "Byte.MAX_VALUE"};

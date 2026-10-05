@@ -15,14 +15,11 @@ public final class FixUtils {
     public static boolean isValidIncrementDecrementContext(PsiElement parent) {
         return parent instanceof PsiAssignmentExpression
                 || parent instanceof PsiLocalVariable
-                || parent instanceof PsiBinaryExpression
                 || parent instanceof PsiPolyadicExpression
                 || parent instanceof PsiExpressionList
                 || parent instanceof PsiArrayAccessExpression
                 || parent instanceof PsiReturnStatement;
     }
-
-    // Pra highlight de ++/-- cobrir a expressão pai inteira quando fizer sentido
 
     public static PsiElement getIncrementDecrementHighlightTarget(PsiElement parent, PsiExpression expression) {
         if (parent instanceof PsiAssignmentExpression assignment) return assignment;

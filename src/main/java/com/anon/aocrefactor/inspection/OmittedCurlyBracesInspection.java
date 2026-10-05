@@ -21,8 +21,8 @@ public class OmittedCurlyBracesInspection extends AbstractBaseJavaLocalInspectio
                 checkBranch(statement.getThenBranch());
 
                 PsiStatement elseBranch = statement.getElseBranch();
-                // Ignora "else if": esse elseBranch é outro PsiIfStatement e será
-                // verificado quando o visitor visitar ele diretamente (evita duplicidade)
+                // Ignore "else if": this elseBranch is another PsiIfStatement and will be
+                // checked when the visitor visits it directly (avoids duplication)
                 if (elseBranch != null && !(elseBranch instanceof PsiIfStatement)) {
                     checkBranch(elseBranch);
                 }
@@ -52,9 +52,9 @@ public class OmittedCurlyBracesInspection extends AbstractBaseJavaLocalInspectio
                 checkBranch(statement.getBody());
             }
 
-            // Marca o statement com warning se ele for vazio,
-            // não estiver dentro de um bloco { },
-            // ou a branch for null.
+            // Marks the statement with a warning if it is empty,
+            // is not inside a { } block,
+            // or the branch is null.
 
             private void checkBranch(PsiStatement branch) {
                 if (branch == null) return;

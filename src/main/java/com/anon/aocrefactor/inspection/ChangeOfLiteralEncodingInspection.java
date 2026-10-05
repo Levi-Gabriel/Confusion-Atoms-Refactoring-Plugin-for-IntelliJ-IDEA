@@ -69,7 +69,7 @@ public class ChangeOfLiteralEncodingInspection extends AbstractBaseJavaLocalInsp
                         || op.equals(JavaTokenType.GTGT)
                         || op.equals(JavaTokenType.GTGTGT)) {
 
-                    // como é deslocamento de bits, não tem problema se o operando direito for decimal
+                    // since it's a bitwise shift, it doesn't matter if the right operand is decimal
                     PsiExpression leftOperand = expression.getLOperand();
                     checkBitwiseOperand(leftOperand);
                 }

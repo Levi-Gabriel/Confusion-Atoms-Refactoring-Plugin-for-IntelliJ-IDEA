@@ -12,14 +12,14 @@ import java.util.List;
 
 public class WrapWithParenthesesQuickFix implements LocalQuickFix {
 
-    private final List<TextRange> operandRanges; // ranges relativos à expressão pai
+    private final List<TextRange> operandRanges; // ranges relative to the parent expression
 
     public WrapWithParenthesesQuickFix(PsiExpression parentExpression, List<PsiExpression> operands) {
         this.operandRanges = new ArrayList<>(operands.size());
         int parentStart = parentExpression.getTextRange().getStartOffset();
         for (PsiExpression operand : operands) {
             TextRange r = operand.getTextRange();
-            operandRanges.add(r.shiftLeft(parentStart)); // relativo ao texto do pai
+            operandRanges.add(r.shiftLeft(parentStart)); // relative to father's text
         }
     }
 
@@ -37,7 +37,8 @@ public class WrapWithParenthesesQuickFix implements LocalQuickFix {
     public void applyFix(@NotNull Project project, @NotNull ProblemDescriptor descriptor) {
         PsiExpression expression = (PsiExpression) descriptor.getPsiElement();
         String original = expression.getText();
-        // Constrói o novo texto de trás pra frente, pra não invalidar offsets já usados
+        // Builds the new text from back to front,
+        // so as not to invalidate offsets that have already been used
         StringBuilder sb = new StringBuilder(original);
         List<TextRange> sorted = new ArrayList<>(operandRanges);
         sorted.sort((a, b) -> b.getStartOffset() - a.getStartOffset());

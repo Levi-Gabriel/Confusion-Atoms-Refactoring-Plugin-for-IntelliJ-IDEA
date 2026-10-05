@@ -1,14 +1,39 @@
 <idea-plugin>
-    <id>com.anon.confusion-atoms-refactor</id>
+    <id>com.code-comprehension-research.confusion-atoms-refactor</id>
     <name>Confusion Atoms Refactor</name>
-    <vendor></vendor>
-    <description>Detecta e refatora átomos de confusão em código Java.</description>
+    <vendor>Code Comprehension Research</vendor>
 
+    <description><![CDATA[
+        Detects and refactors <b>atoms of confusion</b> in Java code directly in the editor.
+        <br/><br/>
+        Atoms of confusion are small syntactic patterns that are valid and correct,
+        but often misread by developers. This plugin reports nine of them as inspections
+        and offers quick fixes that rewrite the code into a clearer form:
+        <ul>
+            <li>Conditional operator</li>
+            <li>Infix operator precedence</li>
+            <li>Pre- and post-increment/decrement</li>
+            <li>Arithmetic as logic</li>
+            <li>Type conversion</li>
+            <li>Omitted curly braces</li>
+            <li>Logic as control flow</li>
+            <li>Change of literal encoding</li>
+        </ul>
+    ]]></description>
+
+    <change-notes><![CDATA[
+<h4>1.0.0</h4>
+<ul>
+    <li>Initial release.</li>
+    <li>Added 9 inspections for atoms of confusion in Java code.</li>
+    <li>Added quick fixes that refactor each detected atom into a clearer equivalent.</li>
+</ul>
+]]>
+    </change-notes>
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Inspection 1: Operador condicional -->
         <localInspection
                 language="JAVA"
                 displayName="Operador condicional (átomo de confusão)"
@@ -16,7 +41,6 @@
                 enabledByDefault="true"
                 level="WARNING"
                 implementationClass="com.anon.aocrefactor.inspection.ConditionalOperatorInspection"/>
-        <!-- Inspection 2: Precedência de operadores -->
         <localInspection
                 language="JAVA"
                 displayName="Precedência de operadores infix (átomo de confusão)"
@@ -24,8 +48,6 @@
                 enabledByDefault="true"
                 level="WARNING"
                 implementationClass="com.anon.aocrefactor.inspection.InfixOperatorPrecedenceInspection"/>
-
-        <!-- Inspection 3: Pré-incremento/decremento -->
         <localInspection
                 language="JAVA"
                 displayName="Pré-incremento/decremento (átomo de confusão)"
@@ -33,8 +55,6 @@
                 enabledByDefault="true"
                 level="WARNING"
                 implementationClass="com.anon.aocrefactor.inspection.PreIncrementDecrementInspection"/>
-
-        <!-- Inspection 4: Pós-incremento/decremento -->
         <localInspection
                 language="JAVA"
                 displayName="Pós-incremento/decremento (átomo de confusão)"
@@ -42,8 +62,6 @@
                 enabledByDefault="true"
                 level="WARNING"
                 implementationClass="com.anon.aocrefactor.inspection.PostIncrementDecrementInspection"/>
-
-        <!-- Inspection 5: Aritmética como lógica -->
         <localInspection
                 language="JAVA"
                 displayName="Aritmética como lógica (átomo de confusão)"
@@ -51,8 +69,6 @@
                 enabledByDefault="true"
                 level="WARNING"
                 implementationClass="com.anon.aocrefactor.inspection.ArithmeticAsLogicInspection"/>
-
-        <!-- Inspection 6: Conversão de tipo -->
         <localInspection
                 language="JAVA"
                 displayName="Narrowing type conversion (confusion atom)"
@@ -68,7 +84,6 @@
                 enabledByDefault="true"
                 level="WARNING"
                 implementationClass="com.anon.aocrefactor.inspection.OmittedCurlyBracesInspection"/>
-        <!-- Inspection 8: Lógica como controle de fluxo -->
         <localInspection
                 language="JAVA"
                 displayName="Logic As Control Flow (confusion atom)"

@@ -38,8 +38,8 @@ public class ReplaceArithmeticAsLogicQuickFix implements LocalQuickFix {
 
         if (!(arithmeticSide instanceof PsiBinaryExpression arithmetic)) return;
 
-        // Constrói a expressão lógica equivalente completa, recursivamente,
-        // resolvendo qualquer nível de multiplicação encadeada de uma só vez
+        // Recursively constructs the complete equivalent logical expression,
+        // resolving any level of nested multiplication in a single step.
         String replacement = transformEqualsZero(arithmetic, isEquals);
         if (replacement == null) return;
 
@@ -63,18 +63,18 @@ public class ReplaceArithmeticAsLogicQuickFix implements LocalQuickFix {
                     String leftPart = transformEqualsZero(left, isEquals);
                     String rightPart = transformEqualsZero(right, isEquals);
                     return String.format("%s %s %s", leftPart, logical, rightPart);
-                    // primeiro caso base
+                    // first base case
                 } else if (op == JavaTokenType.MINUS) {
                     return String.format("%s %s %s", left.getText(), cmp, right.getText());
-                    // segundo caso base
+                    // second base case
                 } else if (op == JavaTokenType.PLUS) {
                     return String.format("%s %s -(%s)", left.getText(), cmp, right.getText());
                 }
             }
         }
 
-        // Terceiro caso base: não é uma composição reconhecida (*, -, +),
-        // apenas compara a expressão inteira com 0.
+        // Third base case: it is not a recognized composition (*, -, +),
+        // simply compare the entire expression with 0.
         return String.format("%s %s 0", expr.getText(), cmp);
     }
 }
