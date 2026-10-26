@@ -1,6 +1,6 @@
 # Confusion Atoms Refactoring Plugin for IntelliJ IDEA
 
-An IntelliJ IDEA plugin developed as part of the research project **"To Refactor or Not to Refactor Atoms of Confusion? Evidence from a Scoping Review, Bytecode-Level Analysis, and Tool Support"**.
+Confusion Atoms Refactoring is an IntelliJ IDEA plugin that detects Java code patterns known as atoms of confusion and offers quick fixes to rewrite them in a clearer form.
 
 Building upon the foundational work on Atoms of Confusion by Gopstein et al., the empirical studies by Langhout & Aniche, and the inspection capabilities of the [Bohr inspection tool](https://github.com/wendellmfm/bohr) made by Wendell Mendes, this plugin brings automated detection and refactoring of confusion-inducing patterns directly into the developer's IDE workflow. It leverages PSI-based semantic analysis via the JetBrains Plugin SDK to identify and transform complex Java construct patterns into clear, maintainable code.
 
