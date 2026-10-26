@@ -14,9 +14,9 @@ import org.jetbrains.annotations.NotNull;
 public class PostIncrementDecrementInspection extends AbstractBaseJavaLocalInspectionTool {
 
     private static final String MESSAGE_WITH_FIX =
-            "Confusion atom: %s operator may cause confusion. Consider separating the operation.";
+            "%s operator may cause confusion.";
     private static final String MESSAGE_NO_FIX =
-            "Confusion atom: %s operator may cause confusion. "
+            "%s operator may cause confusion. "
                     + "No automatic fix: it cannot be separated without changing behavior.";
 
     @Override
@@ -32,8 +32,12 @@ public class PostIncrementDecrementInspection extends AbstractBaseJavaLocalInspe
                 PsiElement parent = expression.getParent();
                 if (!FixUtils.isValidIncrementDecrementContext(parent)) return;
 
-                String opName = op == JavaTokenType.PLUSPLUS
-                        ? "post-increment (++)" : "post-decrement (--)";
+                String opName;
+                if (op == JavaTokenType.PLUSPLUS) {
+                    opName = "post-increment (++)";
+                } else {
+                    opName = "post-decrement (--)";
+                }
 
                 PsiElement highlightTarget =
                         FixUtils.getIncrementDecrementHighlightTarget(parent, expression);
@@ -50,7 +54,7 @@ public class PostIncrementDecrementInspection extends AbstractBaseJavaLocalInspe
                 holder.registerProblem(
                         highlightTarget,
                         String.format(safe ? MESSAGE_WITH_FIX : MESSAGE_NO_FIX, opName),
-                        ProblemHighlightType.WARNING,
+                        ProblemHighlightType.WEAK_WARNING,
                         fixes
                 );
             }

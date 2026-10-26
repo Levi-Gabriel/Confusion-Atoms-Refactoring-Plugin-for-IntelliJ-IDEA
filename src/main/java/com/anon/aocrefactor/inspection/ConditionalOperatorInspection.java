@@ -19,8 +19,8 @@ public class ConditionalOperatorInspection extends AbstractBaseJavaLocalInspecti
                 super.visitConditionalExpression(expression);
                 holder.registerProblem(
                         expression,
-                        "Confusion atom: conditional operator (?:). Consider using if-else.",
-                        ProblemHighlightType.WARNING,
+                        "Ternary operator may cause confusion. Consider using if-else.",
+                        ProblemHighlightType.WEAK_WARNING,
                         new ReplaceConditionalOperatorQuickFix()
                 );
             }

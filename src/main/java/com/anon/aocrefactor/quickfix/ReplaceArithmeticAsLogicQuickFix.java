@@ -8,6 +8,9 @@ import com.intellij.psi.*;
 import com.intellij.psi.tree.IElementType;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class ReplaceArithmeticAsLogicQuickFix implements LocalQuickFix {
 
     @Override
@@ -36,7 +39,7 @@ public class ReplaceArithmeticAsLogicQuickFix implements LocalQuickFix {
         PsiExpression arithmeticSide = ExpressionUtils.isZero(rhs) ? lhs : rhs;
         arithmeticSide = ExpressionUtils.unwrapParentheses(arithmeticSide);
 
-        if (!(arithmeticSide instanceof PsiBinaryExpression arithmetic)) return;
+        if (!(arithmeticSide instanceof PsiPolyadicExpression arithmetic)) return;
 
         // Recursively constructs the complete equivalent logical expression,
         // resolving any level of nested multiplication in a single step.
@@ -52,29 +55,31 @@ public class ReplaceArithmeticAsLogicQuickFix implements LocalQuickFix {
         expr = ExpressionUtils.unwrapParentheses(expr);
         String cmp = isEquals ? "==" : "!=";
 
-        if (expr instanceof PsiBinaryExpression bin) {
-            IElementType op = bin.getOperationTokenType();
-            PsiExpression left = bin.getLOperand();
-            PsiExpression right = bin.getROperand();
+        if (expr instanceof PsiPolyadicExpression poly) {
+            IElementType op = poly.getOperationTokenType();
+            PsiExpression[] operands = poly.getOperands();
 
-            if (right != null) {
-                if (op == JavaTokenType.ASTERISK) {
-                    String logical = isEquals ? "||" : "&&";
-                    String leftPart = transformEqualsZero(left, isEquals);
-                    String rightPart = transformEqualsZero(right, isEquals);
-                    return String.format("%s %s %s", leftPart, logical, rightPart);
-                    // first base case
-                } else if (op == JavaTokenType.MINUS) {
-                    return String.format("%s %s %s", left.getText(), cmp, right.getText());
-                    // second base case
-                } else if (op == JavaTokenType.PLUS) {
-                    return String.format("%s %s -(%s)", left.getText(), cmp, right.getText());
+            // a product is zero when any factor is zero
+            if (op == JavaTokenType.ASTERISK && operands.length >= 2) {
+                String logical = isEquals ? "||" : "&&";
+                return Arrays.stream(operands)
+                        .map(operand -> transformEqualsZero(operand, isEquals))
+                        .collect(Collectors.joining(" " + logical + " "));
+            }
+
+            if (operands.length == 2) {
+                String left = operands[0].getText();
+                String right = operands[1].getText();
+                if (op == JavaTokenType.MINUS) {
+                    return String.format("%s %s %s", left, cmp, right);
+                }
+                if (op == JavaTokenType.PLUS) {
+                    return String.format("%s %s -(%s)", left, cmp, right);
                 }
             }
         }
 
-        // Third base case: it is not a recognized composition (*, -, +),
-        // simply compare the entire expression with 0.
+        // not a recognized composition: compare the whole expression with 0
         return String.format("%s %s 0", expr.getText(), cmp);
     }
 }

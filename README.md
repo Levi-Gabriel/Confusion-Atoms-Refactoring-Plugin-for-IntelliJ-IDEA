@@ -56,7 +56,7 @@ aoc-refactor/
     │   │   ├── InfixOperatorPrecedenceInspection.java
     │   │   ├── PreIncrementDecrementInspection.java
     │   │   ├── PostIncrementDecrementInspection.java
-    │   │   ├── ArithmeticAsLogicInspection.java
+    │   │   ├── ArithmeticAsLogic.java
     │   │   ├── TypeConversionInspection.java
     │   │   ├── OmittedCurlyBracesInspection.java
     │   │   ├── LogicAsControlFlowInspection.java

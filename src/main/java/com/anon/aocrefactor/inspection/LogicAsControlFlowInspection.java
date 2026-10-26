@@ -18,8 +18,8 @@ public class LogicAsControlFlowInspection extends AbstractBaseJavaLocalInspectio
 
     public static final String SHORT_NAME = "LogicAsControlFlow";
 
-    private static final String MESSAGE = "Logic as Control Flow atom detected: short-circuit evaluation "
-            + "masks conditional execution. Consider refactoring into an explicit control flow statement.";
+    private static final String MESSAGE = "Short-circuit evaluation "
+            + "masks conditional execution.";
 
     @Override
     public @NotNull String getShortName() {
@@ -61,7 +61,7 @@ public class LogicAsControlFlowInspection extends AbstractBaseJavaLocalInspectio
                 } else {
                     fixes = LocalQuickFix.EMPTY_ARRAY;
                 }
-                holder.registerProblem(expression, MESSAGE, ProblemHighlightType.WARNING, fixes);
+                holder.registerProblem(expression, MESSAGE, ProblemHighlightType.WEAK_WARNING, fixes);
             }
 
             // Operando não-inicial de uma expressão lógica pai: o aviso é delegado ao nó pai.

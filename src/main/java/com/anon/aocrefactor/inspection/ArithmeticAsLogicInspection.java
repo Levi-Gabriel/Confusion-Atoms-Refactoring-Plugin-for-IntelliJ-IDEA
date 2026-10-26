@@ -37,8 +37,8 @@ public class ArithmeticAsLogicInspection extends AbstractBaseJavaLocalInspection
 
                 holder.registerProblem(
                         expression,
-                        "Confusion atom: arithmetic used as logic. Consider using explicit logical operators.",
-                        ProblemHighlightType.WARNING,
+                        describe(arithmeticSide),
+                        ProblemHighlightType.WEAK_WARNING,
                         new ReplaceArithmeticAsLogicQuickFix()
                 );
             }
@@ -46,11 +46,27 @@ public class ArithmeticAsLogicInspection extends AbstractBaseJavaLocalInspection
     }
 
     private boolean isArithmeticAsLogicExpression(PsiExpression expr) {
-        if (expr instanceof PsiBinaryExpression bin) {
-            IElementType op = bin.getOperationTokenType();
+        if (expr instanceof PsiPolyadicExpression poly) {
+            IElementType op = poly.getOperationTokenType();
             if (op == JavaTokenType.ASTERISK) return true;
-            return OperatorUtils.isLowPrecedenceArithmetic(op);
-        }
+            if(poly instanceof PsiBinaryExpression) return (OperatorUtils.isLowPrecedenceArithmetic(op));
+            }
         return false;
+    }
+    private static String describe(PsiExpression arithmetic) {
+        IElementType op = ((PsiPolyadicExpression) arithmetic).getOperationTokenType();
+        String kind;
+        if (op == JavaTokenType.ASTERISK) {
+            kind = "Multiplication";
+        } else {
+            String _temp;
+            if (op == JavaTokenType.MINUS) {
+                _temp = "Subtraction";
+            } else {
+                _temp = "Addition";
+            }
+            kind = _temp;
+        }
+        return kind + " compared to zero is used as a logical expression";
     }
 }

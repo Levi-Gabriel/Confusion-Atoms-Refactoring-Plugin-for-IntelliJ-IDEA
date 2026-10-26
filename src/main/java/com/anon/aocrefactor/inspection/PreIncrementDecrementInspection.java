@@ -14,11 +14,10 @@ import org.jetbrains.annotations.NotNull;
 public class PreIncrementDecrementInspection extends AbstractBaseJavaLocalInspectionTool {
 
     private static final String MESSAGE_WITH_FIX =
-            "<html>Confusion atom: %s operator may cause confusion.<br>"
-                    + "Consider separating the operation.</html>";
+            "%s operator may cause confusion.";
     private static final String MESSAGE_NO_FIX =
-            "<html>Confusion atom: %s operator may cause confusion.<br>"
-                    + "No automatic fix: it cannot be separated without changing behavior.</html>";
+            "%s operator may cause confusion."
+                    + "No automatic fix: it cannot be separated without changing behavior.";
 
     @Override
     public @NotNull PsiElementVisitor buildVisitor(@NotNull ProblemsHolder holder, boolean isOnTheFly) {
@@ -56,7 +55,7 @@ public class PreIncrementDecrementInspection extends AbstractBaseJavaLocalInspec
                 holder.registerProblem(
                         highlightTarget,
                         String.format(safe ? MESSAGE_WITH_FIX : MESSAGE_NO_FIX, opName),
-                        ProblemHighlightType.WARNING,
+                        ProblemHighlightType.WEAK_WARNING,
                         fixes
                 );
             }

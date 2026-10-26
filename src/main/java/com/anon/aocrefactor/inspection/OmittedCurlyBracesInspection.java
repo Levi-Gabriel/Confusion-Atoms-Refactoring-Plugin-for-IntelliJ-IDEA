@@ -1,6 +1,6 @@
 package com.anon.aocrefactor.inspection;
 
-import com.anon.aocrefactor.quickfix.AddCurlyBracesQuickFix;
+import com.anon.aocrefactor.quickfix.OmittedCurlyBracesQuickFix;
 import com.intellij.codeInspection.*;
 import com.intellij.psi.*;
 import org.jetbrains.annotations.NotNull;
@@ -63,9 +63,9 @@ public class OmittedCurlyBracesInspection extends AbstractBaseJavaLocalInspectio
                 if (isTerminalStatement(branch)) return;
                 holder.registerProblem(
                         branch,
-                        "Confusion atom: omitted curly braces may cause ambiguity about which statements belong to this block.",
-                        ProblemHighlightType.WARNING,
-                        new AddCurlyBracesQuickFix()
+                        "Omitted curly braces may cause ambiguity about which statements belong to this block.",
+                        ProblemHighlightType.WEAK_WARNING,
+                        new OmittedCurlyBracesQuickFix()
                 );
             }
             private boolean isTerminalStatement(PsiStatement branch) {

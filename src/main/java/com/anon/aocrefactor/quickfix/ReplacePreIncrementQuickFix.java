@@ -12,20 +12,6 @@ import com.intellij.psi.util.PsiUtil;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/**
- * Separates a pre-increment/decrement from the expression that uses it.
- *
- * Single strategy, semantics-preserving:
- *  - "a = ++b;"        ->  "b += 1; a = b;"
- *  - "return a[++i];"  ->  "i += 1; return a[i];"
- *
- * Supported operands: local variables, parameters and fields ("x", "this.x", "Cls.x").
- * Fields are only accepted when nothing else in the same statement could read or
- * write them (no calls, no assignments, no other ++/--).
- *
- * The fix is only valid when {@link #isSafeToSeparate} returns true. The inspection
- * must only offer this fix in that case.
- */
 public class ReplacePreIncrementQuickFix implements LocalQuickFix {
 
     /** Everything the fix needs to know, computed once by {@link #analyze}. */
@@ -100,21 +86,25 @@ public class ReplacePreIncrementQuickFix implements LocalQuickFix {
         if (scope == null) return null;
 
         // for (init; cond; update): init/update statements cannot be moved.
-        if (stmt.getParent() instanceof PsiForStatement f
-                && (f.getInitialization() == stmt || f.getUpdate() == stmt)) {
-            return null;
+        if (stmt.getParent() instanceof PsiForStatement f) {
+            if ((f.getInitialization() == stmt || f.getUpdate() == stmt)) {
+                return null;
+            }
         }
 
         // "case X -> foo(++i);" inside a switch *expression*: wrapping in a block
         // would require a "yield", so we do not offer the fix.
-        if (stmt.getParent() instanceof PsiSwitchLabeledRuleStatement rule
-                && rule.getEnclosingSwitchBlock() instanceof PsiSwitchExpression) {
-            return null;
+        if (stmt.getParent() instanceof PsiSwitchLabeledRuleStatement rule) {
+            if (rule.getEnclosingSwitchBlock() instanceof PsiSwitchExpression) {
+                return null;
+            }
         }
 
         // "int a = 0, b = ++a;": the increment would be moved before the declaration
         // of the variable it modifies.
-        if (isLocal && PsiTreeUtil.isAncestor(stmt, variable, true)) return null;
+        if (isLocal) {
+            if (PsiTreeUtil.isAncestor(stmt, variable, true)) return null;
+        }
 
         // 5. The variable must appear exactly once in the evaluated part
         //    (otherwise "x = i + ++i" would change meaning).
@@ -125,7 +115,11 @@ public class ReplacePreIncrementQuickFix implements LocalQuickFix {
 
         // 6. A field can be observed by anything evaluated in the same statement
         //    (method calls, constructors, assignments, other ++/--). Locals cannot.
-        if (!isLocal && hasSideEffects(scope, expr)) return null;
+        if (!isLocal) {
+            if (hasSideEffects(scope, expr)) {
+                return null;
+            }
+        }
 
         return new Plan(stmt, ref.getText());
     }
@@ -134,7 +128,8 @@ public class ReplacePreIncrementQuickFix implements LocalQuickFix {
     private static boolean isPlainQualifier(@Nullable PsiExpression qualifier) {
         if (qualifier == null) return true;
         if (qualifier instanceof PsiThisExpression) return true;
-        return qualifier instanceof PsiReferenceExpression q && q.resolve() instanceof PsiClass;
+        if (!(qualifier instanceof PsiReferenceExpression q)) return false;
+        return q.resolve() instanceof PsiClass;
     }
 
     private static boolean hasSideEffects(@NotNull PsiElement scope, @NotNull PsiPrefixExpression self) {
@@ -146,10 +141,6 @@ public class ReplacePreIncrementQuickFix implements LocalQuickFix {
                 .filter(u -> u != self)
                 .anyMatch(u -> OperatorUtils.isIncrementOrDecrement(u.getOperationTokenType()));
     }
-
-    // ------------------------------------------------------------------
-    // Fix
-    // ------------------------------------------------------------------
 
     @Override
     public void applyFix(@NotNull Project project, @NotNull ProblemDescriptor descriptor) {

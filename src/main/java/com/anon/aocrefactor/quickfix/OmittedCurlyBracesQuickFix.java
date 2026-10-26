@@ -2,12 +2,11 @@ package com.anon.aocrefactor.quickfix;
 
 import com.intellij.codeInspection.LocalQuickFix;
 import com.intellij.codeInspection.ProblemDescriptor;
-import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.*;
 import org.jetbrains.annotations.NotNull;
 
-public class AddCurlyBracesQuickFix implements LocalQuickFix {
+public class OmittedCurlyBracesQuickFix implements LocalQuickFix {
 
     @Override
     public @NotNull String getName() {

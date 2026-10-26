@@ -13,23 +13,8 @@ import com.intellij.psi.util.PsiUtil;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/**
- * Separates a post-increment/decrement from the expression that uses it.
- *
- * Two strategies, both semantics-preserving:
- *  - AFTER: "a = b++;"  ->  "a = b; b += 1;"   (only for plain assignments/initializers)
- *  - TEMP:  "return a[i++];" -> "int oldI = i; i += 1; return a[oldI];"
- *
- * Supported operands: local variables, parameters and fields ("x", "this.x", "Cls.x").
- * Fields are only accepted when nothing else in the same statement could read or
- * write them (no calls, no assignments, no other ++/--).
- *
- * The fix is only valid when {@link #isSafeToSeparate} returns true. The inspection
- * must only offer this fix in that case.
- */
 public class ReplacePostIncrementQuickFix implements LocalQuickFix {
 
-    /** Everything the fix needs to know, computed once by {@link #analyze}. */
     private record Plan(PsiStatement statement, PsiVariable variable, String operandText, boolean after) {}
 
     @Override
@@ -46,12 +31,8 @@ public class ReplacePostIncrementQuickFix implements LocalQuickFix {
         return analyze(expr) != null;
     }
 
-    // ------------------------------------------------------------------
-    // Analysis
-    // ------------------------------------------------------------------
-
     private static @Nullable Plan analyze(@NotNull PsiPostfixExpression expr) {
-        // 1. Operand must be a local variable, a parameter or a field ("x", "this.x", "Cls.x").
+        // Operand must be a local variable, a parameter or a field ("x", "this.x", "Cls.x").
         PsiExpression operand = PsiUtil.skipParenthesizedExprDown(expr.getOperand());
         if (!(operand instanceof PsiReferenceExpression ref)) return null;
         if (!isPlainQualifier(ref.getQualifierExpression())) return null;
@@ -59,11 +40,11 @@ public class ReplacePostIncrementQuickFix implements LocalQuickFix {
         boolean isLocal = variable instanceof PsiLocalVariable || variable instanceof PsiParameter;
         if (!isLocal && !(variable instanceof PsiField)) return null;
 
-        // 2. A standalone "i++;" has nothing to separate.
+        // A standalone "i++;" has nothing to separate.
         PsiElement top = PsiUtil.skipParenthesizedExprUp(expr);
         if (top.getParent() instanceof PsiExpressionStatement) return null;
 
-        // 3. Walk up to the enclosing statement, rejecting conditional evaluation.
+        // Walk up to the enclosing statement, rejecting conditional evaluation.
         PsiElement child = expr;
         PsiElement parent = expr.getParent();
         while (parent != null && !(parent instanceof PsiStatement)) {
@@ -71,15 +52,19 @@ public class ReplacePostIncrementQuickFix implements LocalQuickFix {
             if (parent instanceof PsiPolyadicExpression poly) {
                 IElementType t = poly.getOperationTokenType();
                 boolean shortCircuit = t == JavaTokenType.ANDAND || t == JavaTokenType.OROR;
-                if (shortCircuit && poly.getOperands()[0] != child) return null;
+                if (shortCircuit) {
+                    if (poly.getOperands()[0] != child) return null;
+                }
             }
-            if (parent instanceof PsiConditionalExpression cond && cond.getCondition() != child) return null;
+            if (parent instanceof PsiConditionalExpression cond) {
+                if (cond.getCondition() != child) return null;
+            }
             child = parent;
             parent = parent.getParent();
         }
         if (!(parent instanceof PsiStatement stmt)) return null;
 
-        // 4. Only statements that evaluate the expression exactly once, unconditionally.
+        //    Only statements that evaluate the expression exactly once, unconditionally.
         //    Loop conditions are excluded on purpose: they are re-evaluated each iteration.
         PsiElement scope;
         if (stmt instanceof PsiIfStatement ifStmt) {
@@ -98,9 +83,10 @@ public class ReplacePostIncrementQuickFix implements LocalQuickFix {
         if (scope == null) return null;
 
         // for (init; cond; update): init/update statements cannot be moved.
-        if (stmt.getParent() instanceof PsiForStatement f
-                && (f.getInitialization() == stmt || f.getUpdate() == stmt)) {
-            return null;
+        if (stmt.getParent() instanceof PsiForStatement f) {
+            if ((f.getInitialization() == stmt || f.getUpdate() == stmt)) {
+                return null;
+            }
         }
 
         // 5. The variable must appear exactly once in the evaluated part
@@ -112,7 +98,11 @@ public class ReplacePostIncrementQuickFix implements LocalQuickFix {
 
         // 6. A field can be observed by anything evaluated in the same statement
         //    (method calls, constructors, assignments, other ++/--). Locals cannot.
-        if (!isLocal && hasSideEffects(scope, expr)) return null;
+        if (!isLocal) {
+            if (hasSideEffects(scope, expr)) {
+                return null;
+            }
+        }
 
         return new Plan(stmt, variable, ref.getText(), canIncrementAfter(top));
     }
@@ -121,7 +111,8 @@ public class ReplacePostIncrementQuickFix implements LocalQuickFix {
     private static boolean isPlainQualifier(@Nullable PsiExpression qualifier) {
         if (qualifier == null) return true;
         if (qualifier instanceof PsiThisExpression) return true;
-        return qualifier instanceof PsiReferenceExpression q && q.resolve() instanceof PsiClass;
+        if (!(qualifier instanceof PsiReferenceExpression q)) return false;
+        return q.resolve() instanceof PsiClass;
     }
 
     private static boolean hasSideEffects(@NotNull PsiElement scope, @NotNull PsiPostfixExpression self) {
@@ -158,10 +149,6 @@ public class ReplacePostIncrementQuickFix implements LocalQuickFix {
         return asg.getParent() instanceof PsiExpressionStatement;
     }
 
-    // ------------------------------------------------------------------
-    // Fix
-    // ------------------------------------------------------------------
-
     @Override
     public void applyFix(@NotNull Project project, @NotNull ProblemDescriptor descriptor) {
         PsiPostfixExpression postfix =
@@ -176,7 +163,12 @@ public class ReplacePostIncrementQuickFix implements LocalQuickFix {
         PsiStatement stmt = plan.statement();
         PsiVariable variable = plan.variable();
         String name = plan.operandText();   // "count", "this.count", "Counter.count"
-        String op = postfix.getOperationTokenType() == JavaTokenType.PLUSPLUS ? "+=" : "-=";
+        String op;
+        if (postfix.getOperationTokenType() == JavaTokenType.PLUSPLUS) {
+            op = "+=";
+        } else {
+            op = "-=";
+        }
 
         // "b += 1;" instead of "b++;" so the refactored code no longer contains the atom.
         PsiStatement incStatement = factory.createStatementFromText(name + " " + op + " 1;", stmt);
@@ -227,6 +219,10 @@ public class ReplacePostIncrementQuickFix implements LocalQuickFix {
     }
 
     private static String capitalize(String s) {
-        return s.isEmpty() ? s : Character.toUpperCase(s.charAt(0)) + s.substring(1);
+        if (s.isEmpty()) {
+            return s;
+        } else {
+            return Character.toUpperCase(s.charAt(0)) + s.substring(1);
+        }
     }
 }

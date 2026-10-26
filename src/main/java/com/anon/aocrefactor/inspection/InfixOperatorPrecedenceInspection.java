@@ -12,6 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InfixOperatorPrecedenceInspection extends AbstractBaseJavaLocalInspectionTool {
+
+    private static final String LOGICAL_MESSAGE =
+            "'&&' binds tighter than '||'";
+
     @Override
     public @NotNull PsiElementVisitor buildVisitor(
             @NotNull ProblemsHolder holder,
@@ -57,24 +61,39 @@ public class InfixOperatorPrecedenceInspection extends AbstractBaseJavaLocalInsp
             }
         }
 
-        //arithmetic case
+        // Arithmetic case: e.g. "a + b * c" -> the product is evaluated before the sum.
         if (!arithmeticMismatches.isEmpty()) {
             holder.registerProblem(
                     expression,
-                    "Confusion atom: arithmetic operator precedence. Add parentheses for clarity.",
-                    ProblemHighlightType.WARNING,
+                    buildArithmeticMessage(expression),
+                    ProblemHighlightType.WEAK_WARNING,
                     new WrapWithParenthesesQuickFix(expression, arithmeticMismatches)
             );
         }
 
-        // logic case
+        // Logical case: e.g. "a || b && c" -> the "&&" group is evaluated before the "||".
         if (!logicalMismatches.isEmpty()) {
             holder.registerProblem(
                     expression,
-                    "Confusion atom: logical operator precedence. Add parentheses for clarity.",
-                    ProblemHighlightType.WARNING,
+                    LOGICAL_MESSAGE,
+                    ProblemHighlightType.WEAK_WARNING,
                     new WrapWithParenthesesQuickFix(expression, logicalMismatches)
             );
         }
+    }
+
+    // Only the surrounding operator varies: "*", "/" and "%" always bind tighter than "+" and "-".
+    private static String buildArithmeticMessage(PsiExpression expression) {
+        return "'*', '/' and '%' bind tighter than '"
+                + operatorSign(expression) + "'";
+    }
+
+    // Operator text of a binary/polyadic expression (the sign between its first two operands), "" if unavailable.
+    private static String operatorSign(PsiExpression expression) {
+        if (!(expression instanceof PsiPolyadicExpression polyadic)) return "";
+        PsiExpression[] operands = polyadic.getOperands();
+        if (operands.length < 2) return "";
+        PsiJavaToken token = polyadic.getTokenBeforeOperand(operands[1]);
+        return token == null ? "" : token.getText();
     }
 }

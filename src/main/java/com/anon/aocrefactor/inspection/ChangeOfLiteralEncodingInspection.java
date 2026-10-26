@@ -39,9 +39,8 @@ public class ChangeOfLiteralEncodingInspection extends AbstractBaseJavaLocalInsp
                             || parent instanceof PsiField) {
                         holder.registerProblem(
                                 expression,
-                                "Confusion atom: change of literal encoding (" + encoding
-                                        + " literal used in assignment/variable).",
-                                ProblemHighlightType.WARNING,
+                                buildEncodedMessage(encoding, expression),
+                                ProblemHighlightType.WEAK_WARNING,
                                 new ReplaceChangeOfLiteralEncoding(ReplaceChangeOfLiteralEncoding.TargetEncoding.DECIMAL)
                         );
                     }
@@ -80,12 +79,38 @@ public class ChangeOfLiteralEncodingInspection extends AbstractBaseJavaLocalInsp
                 if (ExpressionUtils.isDecimalLiteral(operand)) {
                     holder.registerProblem(
                             operand,
-                            "Confusion atom: change of literal encoding (bitwise/shift operation with decimal literal).",
+                            buildBitwiseMessage(operand),
                             ProblemHighlightType.WARNING,
                             new ReplaceChangeOfLiteralEncoding(ReplaceChangeOfLiteralEncoding.TargetEncoding.HEX),
                             new ReplaceChangeOfLiteralEncoding(ReplaceChangeOfLiteralEncoding.TargetEncoding.BINARY)
                     );
                 }
+            }
+
+            private static String buildBitwiseMessage(PsiExpression operand) {
+                String operator;
+                if (operand.getParent() instanceof PsiBinaryExpression binary) {
+                    operator = " '" + binary.getOperationSign().getText() + "'";
+                } else {
+                    operator = "";
+                }
+
+                return "The decimal literal '" + operand.getText()
+                        + "' is used as an operand of the bitwise/shift operator" + operator
+                        + ", where the bit pattern matters more than the numeric value. "
+                        + "Consider writing it in hexadecimal or binary.";
+            }
+
+            private static String buildEncodedMessage(String encoding, PsiLiteralExpression literal) {
+                String reason = encoding.equals("octal")
+                        ? "a leading zero changes the base, so it is easily misread as a decimal number"
+                        : "the encoding hides the numeric value from the reader";
+
+                String value = literal.getValue() instanceof Number n ? " (value " + n + ")" : "";
+
+                return "The " + encoding + " literal '"
+                        + literal.getText() + "'" + value + " is assigned to a variable; " + reason
+                        + ". Consider writing it in decimal.";
             }
         };
     }
