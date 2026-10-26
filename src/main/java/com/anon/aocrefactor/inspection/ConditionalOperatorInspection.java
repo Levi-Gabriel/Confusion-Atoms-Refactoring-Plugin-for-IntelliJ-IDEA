@@ -19,7 +19,7 @@ public class ConditionalOperatorInspection extends AbstractBaseJavaLocalInspecti
                 super.visitConditionalExpression(expression);
                 holder.registerProblem(
                         expression,
-                        "Ternary operator may cause confusion. Consider using if-else.",
+                        "Ternary operator may cause confusion.",
                         ProblemHighlightType.WEAK_WARNING,
                         new ReplaceConditionalOperatorQuickFix()
                 );
