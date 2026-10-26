@@ -362,4 +362,4 @@ This plugin is part of the broader research project:
 
 ## License
 
-This project is developed for academic research purposes.
+This project is licensed under the [MIT License](LICENSE).
