@@ -18,7 +18,8 @@ public final class FixUtils {
                 || parent instanceof PsiPolyadicExpression
                 || parent instanceof PsiExpressionList
                 || parent instanceof PsiArrayAccessExpression
-                || parent instanceof PsiReturnStatement;
+                || parent instanceof PsiReturnStatement
+                || parent instanceof PsiSwitchStatement;
     }
 
     public static PsiElement getIncrementDecrementHighlightTarget(PsiElement parent, PsiExpression expression) {

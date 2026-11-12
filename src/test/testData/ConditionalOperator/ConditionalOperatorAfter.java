@@ -4,6 +4,9 @@ import java.util.List;
 
 public class ConditionalOperatorAfter {
 
+    private boolean extraCheese;
+    private int diameter;
+
     // declaration
 
     void declarationInt(boolean c) {
@@ -69,6 +72,15 @@ public class ConditionalOperatorAfter {
         }
     }
 
+    void declarationParenthesized(boolean c) {
+        int x;
+        if (c) {
+            x = 1;
+        } else {
+            x = 2;
+        }
+    }
+
     // return
 
     int returnInt(boolean c) {
@@ -103,58 +115,100 @@ public class ConditionalOperatorAfter {
         }
     }
 
+    // ternary is only part of a larger expression (must not lose the rest)
+    public int hashCode() {
+        int temp;
+        if (extraCheese) {
+            temp = 31;
+        } else {
+            temp = 1;
+        }
+        return temp * diameter;
+    }
+
+    int returnWithOuterExpression(boolean c, int y) {
+        int temp;
+        if (c) {
+            temp = 1;
+        } else {
+            temp = 2;
+        }
+        return temp * y;
+    }
+
+    void declarationWithOuterExpression(boolean c, int y) {
+        int temp;
+        if (c) {
+            temp = 1;
+        } else {
+            temp = 2;
+        }
+        int x = temp * y;
+    }
+
     // temp
 
     void argumentOfCall(boolean c) {
-        int _temp;
+        int temp;
         if (c) {
-            _temp = 1;
+            temp = 1;
         } else {
-            _temp = 2;
+            temp = 2;
         }
-        System.out.println(_temp);
+        System.out.println(temp);
     }
 
     void stringArgument(boolean c) {
-        String _temp;
+        String temp;
         if (c) {
-            _temp = "yes";
+            temp = "yes";
         } else {
-            _temp = "no";
+            temp = "no";
         }
-        System.out.println(_temp);
+        System.out.println(temp);
     }
 
     void assignment(boolean c, int x) {
-        int _temp;
+        int temp;
         if (c) {
-            _temp = 1;
+            temp = 1;
         } else {
-            _temp = 2;
+            temp = 2;
         }
-        x = _temp;
+        x = temp;
     }
 
     void arithmeticAssignment(boolean c, int x, int y) {
-        int _temp;
+        int temp;
         if (c) {
-            _temp = 1;
+            temp = 1;
         } else {
-            _temp = 2;
+            temp = 2;
         }
-        y = x + (_temp);
+        y = x + temp;
     }
 
     void inIfCondition(boolean c, boolean a, boolean b) {
-        boolean _temp;
+        boolean temp;
         if (c) {
-            _temp = a;
+            temp = a;
         } else {
-            _temp = b;
+            temp = b;
         }
-        if (_temp) {
+        if (temp) {
             return;
         }
+    }
+
+    void tempNameCollision(boolean c) {
+        int temp = 0;
+        int temp1;
+        if (c) {
+            temp1 = 1;
+        } else {
+            temp1 = 2;
+        }
+        System.out.println(temp + temp1);
     }
 
     // others

@@ -1,0 +1,9 @@
+<project>
+  <component name="ExternalProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aoc-refactor.iml" filepath="$PROJECT_DIR$/.idea/modules/aoc-refactor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aoc-refactor.main.iml" filepath="$PROJECT_DIR$/.idea/modules/aoc-refactor.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/aoc-refactor.test.iml" filepath="$PROJECT_DIR$/.idea/modules/aoc-refactor.test.iml" />
+    </modules>
+  </component>
+</project>

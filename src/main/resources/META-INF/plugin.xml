@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>com.code-comprehension-research.confusion-atoms-refactor</id>
-    <name>Confusion Atoms Refactor</name>
+    <name>Atoms of Confusion Refactor</name>
     <vendor>Code Comprehension Research</vendor>
 
     <description><![CDATA[

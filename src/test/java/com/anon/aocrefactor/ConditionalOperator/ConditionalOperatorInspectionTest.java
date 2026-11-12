@@ -40,6 +40,11 @@ class ConditionalOperatorInspectionTest extends AtomTestBase {
             "InspectionOnly.java", 1
     );
 
+
+    private static final Map<String, List<String>> EXTRA_METHODS = Map.of(
+            "ConditionalOperator.java", List.of("hashCode")
+    );
+
     ConditionalOperatorInspectionTest() {
 
         super(ATOM, new ConditionalOperatorInspection(), HighlightSeverity.WEAK_WARNING);
@@ -51,7 +56,14 @@ class ConditionalOperatorInspectionTest extends AtomTestBase {
 
     static Stream<Arguments> warningFilesAndMethods() {
         return WARNING_FILES.stream().flatMap(file ->
-                AtomTestUtil.methodNames(ATOM, file).map(method -> Arguments.of(file, method)));
+                methodsOf(file).map(method -> Arguments.of(file, method)));
+    }
+
+    private static Stream<String> methodsOf(String file) {
+        return Stream.concat(
+                        AtomTestUtil.methodNames(ATOM, file),
+                        EXTRA_METHODS.getOrDefault(file, List.of()).stream())
+                .distinct();
     }
 
     private static int expectedCount(String methodName) {
@@ -84,7 +96,7 @@ class ConditionalOperatorInspectionTest extends AtomTestBase {
     void reportsNothingBeyondExpectedWarnings(String file) {
         getFixture().configureByFile(file);
 
-        int expectedTotal = AtomTestUtil.methodNames(ATOM, file)
+        int expectedTotal = methodsOf(file)
                 .mapToInt(ConditionalOperatorInspectionTest::expectedCount)
                 .sum() + WARNINGS_OUTSIDE_METHODS.getOrDefault(file, 0);
 

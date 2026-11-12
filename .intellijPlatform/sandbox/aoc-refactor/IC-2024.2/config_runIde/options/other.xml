@@ -1,0 +1,43 @@
+<application>
+  <component name="FileEditorProviderManager"><![CDATA[{}]]></component>
+  <component name="LangManager">
+    <option name="languageName" value="JAVA" />
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontSize" value="15.0" />
+    <option name="presentationModeIdeScale" value="1.75" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
+    "RunOnceActivity.ide.auto-popup.quick-doc.initialized": "true",
+    "build.toolwindow.Sync.selection.state": "com.intellij.build.BuildTreeConsoleView",
+    "experimental.ui.on.first.startup": "true",
+    "experimental.ui.used.version": "242.20224.300",
+    "fileTypeChangedCounter": "1",
+    "fontSizeToResetConsole": "13.0",
+    "fontSizeToResetEditor": "13.0",
+    "ide.memory.adjusted": "true",
+    "input.method.disabler.muted": "true",
+    "installed.kotlin.plugin.version": "242.20224.300-IJ",
+    "last_opened_file_path": "/home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA",
+    "llm.installer.last.toolwindow.state": "LLM_INSTALLER",
+    "migrated.non.roamable.values.from.general.settings": "true",
+    "previousColorScheme": "_@user_Dark",
+    "registry.to.advanced.settings.migration.build": "IC-242.20224.300"
+  },
+  "keyToStringList": {
+    "file.chooser.recent.files": [
+      "/home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA"
+    ],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+  <component name="PsiViewerSettings">
+    <option name="type" value="Java Method" />
+    <option name="text" value="boolean multiplicationEqualsZero(int a, int b) {&#10;    return a == 0 || b == 0;&#10;    }" />
+  </component>
+</application>

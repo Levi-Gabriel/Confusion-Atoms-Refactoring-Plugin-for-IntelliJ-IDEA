@@ -1,0 +1,62 @@
+{
+  "appInfo" : {
+    "build" : "242.20224.300",
+    "buildDate" : "2024-08-06T20:58:00Z[UTC]",
+    "productCode" : "IC",
+    "generated" : "2026-10-29T16:40:48.318902854Z",
+    "os" : "Linux 7.2.10-arch1-1",
+    "runtime" : "JetBrains s.r.o. 21.0.3 21.0.3+13-b509.4"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 12,
+    "maxNumberOfIndexingThreads" : 11,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "type" : "DumbIndexing",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "aoc-refactor",
+    "times" : {
+      "scanningIds" : [ ],
+      "contentLoadingVisibleTime" : 0,
+      "retrievingChangedDuringIndexingFilesTime" : 53100,
+      "separateApplyingIndexesVisibleTime" : 0,
+      "updatingStart" : "2026-10-29T16:40:48.223303793Z",
+      "updatingEnd" : "2026-10-29T16:40:48.246628208Z",
+      "totalWallTimeWithPauses" : 23324565,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "dumbWallTimeWithPauses" : 23324565,
+      "dumbWallTimeWithoutPauses" : 23324565,
+      "dumbModeStart" : "2026-10-29T16:40:48.223303793Z",
+      "totalWallTimeWithoutPauses" : 23324565
+    },
+    "fileCount" : {
+      "numberOfChangedDuringIndexingFiles" : 7,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringIndexingStage" : 0,
+      "numberOfFilesIndexedWithLoadingContent" : 7,
+      "numberOfNothingToWriteFiles" : 0
+    },
+    "totalStatsPerFileType" : [ ],
+    "totalStatsPerBaseLanguage" : [ ],
+    "totalStatsPerIndexer" : [ ],
+    "statisticsOfChangedDuringIndexingFiles" : {
+      "numberOfFiles" : 7,
+      "retrievingTime" : 53100
+    },
+    "fileProviderStatistics" : [ {
+      "providerName" : "Refreshed files",
+      "totalNumberOfIndexedFiles" : 7,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 0,
+      "contentLoadingVisibleTime" : 0,
+      "numberOfTooLargeForIndexingFiles" : 7,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 0
+    } ],
+    "visibleTimeToAllThreadTimeRatio" : 0.0
+  }
+}

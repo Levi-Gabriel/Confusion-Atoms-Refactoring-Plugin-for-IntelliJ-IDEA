@@ -1,7 +1,6 @@
 package com.anon.aocrefactor.quickfix;
 
 import com.anon.aocrefactor.util.FixUtils;
-import com.anon.aocrefactor.util.OperatorUtils;
 import com.intellij.codeInspection.LocalQuickFix;
 import com.intellij.codeInspection.ProblemDescriptor;
 import com.intellij.openapi.project.Project;
@@ -32,10 +31,10 @@ public class ReplacePostIncrementQuickFix implements LocalQuickFix {
     }
 
     private static @Nullable Plan analyze(@NotNull PsiPostfixExpression expr) {
-        // Operand must be a local variable, a parameter or a field ("x", "this.x", "Cls.x").
+        // Operand must be a local variable, a parameter or a field ("x", "this.x", "Cls.x", "obj.x").
         PsiExpression operand = PsiUtil.skipParenthesizedExprDown(expr.getOperand());
         if (!(operand instanceof PsiReferenceExpression ref)) return null;
-        if (!isPlainQualifier(ref.getQualifierExpression())) return null;
+        if (!isSimpleOperandQualifier(ref.getQualifierExpression())) return null;
         if (!(ref.resolve() instanceof PsiVariable variable)) return null;
         boolean isLocal = variable instanceof PsiLocalVariable || variable instanceof PsiParameter;
         if (!isLocal && !(variable instanceof PsiField)) return null;
@@ -84,27 +83,71 @@ public class ReplacePostIncrementQuickFix implements LocalQuickFix {
 
         // for (init; cond; update): init/update statements cannot be moved.
         if (stmt.getParent() instanceof PsiForStatement f) {
-            if ((f.getInitialization() == stmt || f.getUpdate() == stmt)) {
+            if (f.getInitialization() == stmt) {
+                return null;
+            } else if (f.getUpdate() == stmt) {
                 return null;
             }
         }
 
         // 5. The variable must appear exactly once in the evaluated part
         //    (otherwise "x = i++ + i" or "a[i++] = b[i]" would change meaning).
-        long uses = PsiTreeUtil.findChildrenOfType(scope, PsiReferenceExpression.class).stream()
-                .filter(r -> r.isReferenceTo(variable))
-                .count();
-        if (uses != 1) return null;
+        if (countReferences(scope, variable) != 1) return null;
 
-        // 6. A field can be observed by anything evaluated in the same statement
-        //    (method calls, constructors, assignments, other ++/--). Locals cannot.
+        // The objects in the qualifier ("point" in "point.x++") must also appear only once,
+        // so that nothing in the statement can redirect them between the read and the write.
+        if (!qualifierVariablesUsedOnce(ref, scope)) return null;
+
+        boolean after = canIncrementAfter(top, false);
+
+        // 6. A field can be observed by anything evaluated BEFORE the "i++" in the same
+        //    statement (method calls, constructors, array reads...). Moving the increment
+        //    to BEFORE the statement would then change behavior. In that case the only
+        //    safe option is to increment AFTER the statement, which requires that nothing
+        //    evaluated after the "i++" can observe the field or throw.
+        //    Locals cannot be observed, so they are exempt.
         if (!isLocal) {
-            if (hasSideEffects(scope, expr)) {
-                return null;
+            if (!after) {
+                if (hasObservingExpressionBefore(scope, expr)) {
+                    after = canIncrementAfter(top, true);
+                    if (!after) return null;
+                }
             }
         }
 
-        return new Plan(stmt, variable, ref.getText(), canIncrementAfter(top));
+        return new Plan(stmt, variable, ref.getText(), after);
+    }
+
+    private static long countReferences(@NotNull PsiElement scope, @NotNull PsiVariable variable) {
+        return PsiTreeUtil.findChildrenOfType(scope, PsiReferenceExpression.class).stream()
+                .filter(r -> r.isReferenceTo(variable))
+                .count();
+    }
+
+    private static boolean qualifierVariablesUsedOnce(@NotNull PsiReferenceExpression ref,
+                                                      @NotNull PsiElement scope) {
+        PsiExpression q = ref.getQualifierExpression();
+        while (q instanceof PsiReferenceExpression qr) {
+            if (qr.resolve() instanceof PsiVariable qv) {
+                if (countReferences(scope, qv) != 1) return false;
+            }
+            q = qr.getQualifierExpression();
+        }
+        return true;
+    }
+
+    /**
+     * Qualifier of the incremented operand: none, "this" / "Outer.this", a class name
+     * (static field), or a chain of plain variables / fields ("point", "this.point", "a.b").
+     */
+    private static boolean isSimpleOperandQualifier(@Nullable PsiExpression qualifier) {
+        if (qualifier == null) return true;
+        if (qualifier instanceof PsiThisExpression) return true;
+        if (!(qualifier instanceof PsiReferenceExpression q)) return false;
+        PsiElement target = q.resolve();
+        if (target instanceof PsiClass) return true;
+        if (!(target instanceof PsiVariable)) return false;
+        return isSimpleOperandQualifier(q.getQualifierExpression());
     }
 
     /** Accepts no qualifier, "this" / "Outer.this", or a class name (static field). */
@@ -115,25 +158,102 @@ public class ReplacePostIncrementQuickFix implements LocalQuickFix {
         return q.resolve() instanceof PsiClass;
     }
 
-    private static boolean hasSideEffects(@NotNull PsiElement scope, @NotNull PsiPostfixExpression self) {
-        if (!PsiTreeUtil.findChildrenOfAnyType(scope,
-                PsiCallExpression.class, PsiAssignmentExpression.class).isEmpty()) {
+    /**
+     * True if something evaluated before "i++" could observe or modify the field, or throw
+     * (method calls, constructors, array reads, qualified accesses...). Trivial expressions and
+     * ++/-- on plain locals/parameters are harmless: they cannot touch a field.
+     */
+    private static boolean hasObservingExpressionBefore(@NotNull PsiElement scope,
+                                                        @NotNull PsiPostfixExpression self) {
+        int start = self.getTextRange().getStartOffset();
+        for (PsiExpression e : PsiTreeUtil.findChildrenOfType(scope, PsiExpression.class)) {
+            if (e.getTextRange().getEndOffset() > start) continue; // not entirely before
+            if (!isTrivial(e)) {
+                if (!isLocalIncrement(e)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private static boolean isTrivial(@NotNull PsiExpression e) {
+        if (e instanceof PsiLiteralExpression
+                || e instanceof PsiThisExpression
+                || e instanceof PsiParenthesizedExpression) {
             return true;
         }
-        return PsiTreeUtil.findChildrenOfType(scope, PsiUnaryExpression.class).stream()
-                .filter(u -> u != self)
-                .anyMatch(u -> OperatorUtils.isIncrementOrDecrement(u.getOperationTokenType()));
+        if (e instanceof PsiReferenceExpression ref) {
+            // "blocks", "this.blocks", "Cls.blocks": no NPE, no side effects
+            return isPlainQualifier(ref.getQualifierExpression());
+        }
+        return false;
+    }
+
+    /** "++x", "--x", "x++", "x--" where x is a plain local variable or parameter. */
+    private static boolean isLocalIncrement(@NotNull PsiExpression e) {
+        PsiExpression operand;
+        IElementType token;
+        if (e instanceof PsiPrefixExpression p) {
+            operand = p.getOperand();
+            token = p.getOperationTokenType();
+        } else if (e instanceof PsiPostfixExpression p) {
+            operand = p.getOperand();
+            token = p.getOperationTokenType();
+        } else {
+            return false;
+        }
+        if (token != JavaTokenType.PLUSPLUS && token != JavaTokenType.MINUSMINUS) return false;
+        operand = PsiUtil.skipParenthesizedExprDown(operand);
+        if (!(operand instanceof PsiReferenceExpression r)) return false;
+        if (r.getQualifierExpression() != null) return false;
+        PsiElement target = r.resolve();
+        return target instanceof PsiLocalVariable || target instanceof PsiParameter;
     }
 
     /**
-     * True for "x = i++;" and "T x = i++;": nothing between evaluating i++ and
-     * storing the result can throw or observe i, so "x = i; i += 1;" is equivalent.
+     * True when "x = i++;" / "T x = i++;" (and, with allowChain, "T x = a() + i++;" and
+     * similar) can become "x = i; i += 1;": after "i++" is evaluated, nothing but plain
+     * arithmetic and the final store remain, so nothing can throw or observe the field.
+     *
+     * With allowChain the "i++" must be the last operand of +, - or * over primitive operands
+     * (division could throw), optionally wrapped in parentheses, primitive casts or unary +/-/~.
      */
-    private static boolean canIncrementAfter(@NotNull PsiElement top) {
+    private static boolean canIncrementAfter(@NotNull PsiElement top, boolean allowChain) {
+        PsiElement child = top;
         PsiElement holder = top.getParent();
 
+        if (allowChain) {
+            while (true) {
+                if (holder instanceof PsiParenthesizedExpression) {
+                    // transparent
+                } else if (holder instanceof PsiPolyadicExpression poly) {
+                    IElementType t = poly.getOperationTokenType();
+                    if (t != JavaTokenType.PLUS && t != JavaTokenType.MINUS && t != JavaTokenType.ASTERISK) {
+                        return false;
+                    }
+                    PsiExpression[] operands = poly.getOperands();
+                    if (operands[operands.length - 1] != child) return false;
+                    for (PsiExpression o : operands) {
+                        if (!(o.getType() instanceof PsiPrimitiveType)) return false;
+                    }
+                } else if (holder instanceof PsiTypeCastExpression cast) {
+                    if (!(cast.getType() instanceof PsiPrimitiveType)) return false;
+                } else if (holder instanceof PsiPrefixExpression prefix) {
+                    IElementType t = prefix.getOperationTokenType();
+                    if (t != JavaTokenType.MINUS && t != JavaTokenType.PLUS && t != JavaTokenType.TILDE) {
+                        return false;
+                    }
+                } else {
+                    break;
+                }
+                child = holder;
+                holder = holder.getParent();
+            }
+        }
+
         if (holder instanceof PsiLocalVariable lv) {
-            if (lv.getInitializer() == top) {
+            if (lv.getInitializer() == child) {
                 if (lv.getParent() instanceof PsiDeclarationStatement) {
                     return true;
                 }
@@ -142,7 +262,7 @@ public class ReplacePostIncrementQuickFix implements LocalQuickFix {
 
         if (!(holder instanceof PsiAssignmentExpression asg)) return false;
         if (!(asg.getOperationTokenType() == JavaTokenType.EQ)) return false;
-        if (!(asg.getRExpression() == top)) return false;
+        if (!(asg.getRExpression() == child)) return false;
         if (!(asg.getLExpression() instanceof PsiReferenceExpression lhs)) return false;
         if (!(lhs.getQualifierExpression() == null)) return false;
         if (!(lhs.resolve() instanceof PsiVariable)) return false;
@@ -162,7 +282,7 @@ public class ReplacePostIncrementQuickFix implements LocalQuickFix {
         PsiElementFactory factory = JavaPsiFacade.getElementFactory(project);
         PsiStatement stmt = plan.statement();
         PsiVariable variable = plan.variable();
-        String name = plan.operandText();   // "count", "this.count", "Counter.count"
+        String name = plan.operandText();   // "count", "this.count", "Counter.count", "point.x"
         String op;
         if (postfix.getOperationTokenType() == JavaTokenType.PLUSPLUS) {
             op = "+=";

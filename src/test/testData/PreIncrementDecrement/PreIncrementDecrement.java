@@ -5,6 +5,11 @@ public class PreIncrementDecrement {
     int count;
     static int total;
     int[] values = new int[10];
+    Point point = new Point();
+
+    static class Point {
+        int x;
+    }
 
     // local variables and parameters
 
@@ -39,6 +44,15 @@ public class PreIncrementDecrement {
     void incrementInIfCondition(int i) {
         if (++i > 0) {
             return;
+        }
+    }
+
+    void incrementInSwitchSelector(int i) {
+        switch (++i) {
+            case 1:
+                break;
+            default:
+                break;
         }
     }
 
@@ -78,5 +92,35 @@ public class PreIncrementDecrement {
     int fieldAsArrayIndex() {
         return values[++count];
     }
-}
 
+    void fieldInAssignment(int a) {
+        a = ++count;
+    }
+
+    void fieldInMethodCall() {
+        int a = Math.abs(++count);
+    }
+
+    void operandQualifiedByOtherObject() {
+        int a = ++point.x;
+    }
+
+    // without curly braces
+
+    void ifBodyWithoutBraces(boolean c, int a, int b) {
+        if (c)
+            a = ++b;
+    }
+
+    void elseBodyWithoutBraces(boolean c, int a, int b) {
+        if (c)
+            a = 0;
+        else
+            a = ++b;
+    }
+
+    void loopBodyWithoutBraces(boolean c, int a, int b) {
+        while (c)
+            a = ++b;
+    }
+}

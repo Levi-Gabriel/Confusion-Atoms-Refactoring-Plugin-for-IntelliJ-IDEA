@@ -1,0 +1,15 @@
+/Header Record For PersistentHashMapValueStoragegroovy.astbuildergroovy.dateutilgroovy.datetime
+groovy.ant
+groovy.niogroovy.groovydocgroovy.templatesgroovy.jsongradle.installation.beacon
+groovy.xmlgradle.kotlin.dsl.extensions# gradle.kotlin.dsl.tooling.models# gradle.kotlin.dsl.shared.runtimejavaparser.core gradle.core.kotlin.extensionskotlin.stdlibgradle.kotlin.dslserialization.jvmgradle.core.api!kotlinx.serialization.json.jvm"intellij.platform.gradle.plugincore.jvm!kotlinx.serialization.core.jvmkotlin.reflect plugin.repository.rest.clientconverter.jaxbconverter.jacksonkotlin.stdlib.jdk8kotlin.stdlib.jdk7okio.jvmretrofitstructure.ide	okhttpannotationsdd.pliststructure.basegradle.corestructure.intellijxnio.niojboss.threadskotlin.stdlibsmallrye.common.cpuwildfly.commonxnio.apijackson.corejackson.module.kotlin	groovyjackson.databindxzundertow.corejsoupevo.inflector
+trove4jcommons.compress
+commons.iowildfly.client.configsmallrye.common.expressionsmallrye.common.functionsmallrye.common.netsmallrye.common.constraintsmallrye.common.refcaffeinejboss.loggingjakarta.xml.bind.api	jaxb.corejdom2blockmap	jaxb.corejackson.annotationsjspecifyerror.prone.annotationssmallrye.common.annotationcommons.codecangus.activationjaxb.runtimejakarta.activation.api	stax2.apitxw2jaxb.apicommons.lang3	jaxb.implistack.commons.runtimesmallrye.common.osjavax.activation.apiwoodstox.core
+gradle.apitest.framework.commonapiguardian.apiapiguardian.apihamcrest.corehamcrest.coretest.framework.commonjunit.jupiterjunit.jupitertest.framework.corejunit.platform.commonsjunit.platform.commonsjunit.jupiter.apijunit.jupiter.enginetest.framework.corejava.test.frameworkjunit.jupiter.enginejunit.jupiter.paramsjunitjunit.platform.enginejunit.jupiter.api
+opentest4j
+opentest4jjunit.platform.launcherjava.test.frameworkjunit.platform.enginejunit.platform.launcherjunit.jupiter.paramsjunittest.frameworktest.frameworkaether.dependency.resolverdebugger.memory.agentjava.frontback	java.impl	javac2	jb.jdi!jetbrains.kotlinx.metadata.jvmjgoodies.commonjps.buildersjps.buildersjps.javac.extensionjps.launcherjshell.frontendjshell.protocol!maven.resolver.connector.basic maven.resolver.transport.file maven.resolver.transport.http intellij.java.featuresTrainer!intellij.java.structuralSearchintellij.java.unscrambleintellij.java.vcs
+sa.jdwpannotationsapp
+app.clientbouncy.castleexternal.system.rtexternalProcess.rtforms.rt	groovy
+idea.rtintellij.test.discovery	jps.model
+jsch.agentlib
+lib.clientmarketplace.impl	nio.fsopentelemetryplatform.loaderprotobufrdstatstroveutilutil
+util.rt

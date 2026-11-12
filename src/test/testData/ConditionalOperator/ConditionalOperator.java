@@ -4,6 +4,9 @@ import java.util.List;
 
 public class ConditionalOperator {
 
+    private boolean extraCheese;
+    private int diameter;
+
     // declaration
 
     void declarationInt(boolean c) {
@@ -34,6 +37,10 @@ public class ConditionalOperator {
         List<String> list = c ? a : b;
     }
 
+    void declarationParenthesized(boolean c) {
+        int x = (c ? 1 : 2);
+    }
+
     // return
 
     int returnInt(boolean c) {
@@ -50,6 +57,19 @@ public class ConditionalOperator {
 
     int returnParenthesized(boolean c) {
         return (c ? 1 : 2);
+    }
+
+    // ternary is only part of a larger expression (must not lose the rest)
+    public int hashCode() {
+        return (extraCheese ? 31 : 1) * diameter;
+    }
+
+    int returnWithOuterExpression(boolean c, int y) {
+        return (c ? 1 : 2) * y;
+    }
+
+    void declarationWithOuterExpression(boolean c, int y) {
+        int x = (c ? 1 : 2) * y;
     }
 
     // temp
@@ -74,6 +94,11 @@ public class ConditionalOperator {
         if (c ? a : b) {
             return;
         }
+    }
+
+    void tempNameCollision(boolean c) {
+        int temp = 0;
+        System.out.println(temp + (c ? 1 : 2));
     }
 
     // others

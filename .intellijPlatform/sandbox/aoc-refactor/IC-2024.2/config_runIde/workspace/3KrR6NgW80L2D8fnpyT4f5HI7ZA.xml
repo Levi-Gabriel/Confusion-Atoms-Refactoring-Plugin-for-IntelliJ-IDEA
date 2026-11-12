@@ -1,0 +1,1105 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="aoc-refactor" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf ideFingerprint="qckcmakguepc">
+      <file>
+        <entry file="file://$PROJECT_DIR$/src/test/testData/PostIncrementDecrement/PostIncrementDecrement.java">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="352">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+        <tab><![CDATA[{"tabTitle":"PostIncrementDecrement.java","foregroundColor":-2104859,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,80,10,31,102,105,108,101,84,121,112,101,115,47,106,97,118,97,79,117,116,115,105,100,101,83,111,117,114,99,101,46,115,118,103,18,24,101,120,112,117,105,47,102,105,108,101,84,121,112,101,115,47,106,97,118,97,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-11,-102,-33,91,48,0]}]]></tab>
+      </file>
+      <file>
+        <entry file="file://$PROJECT_DIR$/src/test/testData/ConditionalOperator/ConditionalOperatorAfter.java">
+          <provider editor-type-id="text-editor" selected="true" />
+        </entry>
+        <tab><![CDATA[{"tabTitle":"ConditionalOperatorAfter.java","foregroundColor":-2104859,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,80,10,31,102,105,108,101,84,121,112,101,115,47,106,97,118,97,79,117,116,115,105,100,101,83,111,117,114,99,101,46,115,118,103,18,24,101,120,112,117,105,47,102,105,108,101,84,121,112,101,115,47,106,97,118,97,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-11,-102,-33,91,48,0]}]]></tab>
+      </file>
+      <file>
+        <entry file="file://$PROJECT_DIR$/src/test/testData/ArithmeticAsLogic/ArithmeticAsLogic.java">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="264">
+              <caret line="21" column="25" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+        <tab><![CDATA[{"tabTitle":"ArithmeticAsLogic.java","foregroundColor":-2104859,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,80,10,31,102,105,108,101,84,121,112,101,115,47,106,97,118,97,79,117,116,115,105,100,101,83,111,117,114,99,101,46,115,118,103,18,24,101,120,112,117,105,47,102,105,108,101,84,121,112,101,115,47,106,97,118,97,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-11,-102,-33,91,48,0]}]]></tab>
+      </file>
+      <file current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/testData/ArithmeticAsLogic/ArithmeticAsLogicAfter.java">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="286">
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="31" />
+              <folding>
+                <element signature="e#439#440#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+        <tab><![CDATA[{"tabTitle":"ArithmeticAsLogicAfter.java","foregroundColor":-2104859,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,80,10,31,102,105,108,101,84,121,112,101,115,47,106,97,118,97,79,117,116,115,105,100,101,83,111,117,114,99,101,46,115,118,103,18,24,101,120,112,117,105,47,102,105,108,101,84,121,112,101,115,47,106,97,118,97,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-11,-102,-33,91,48,0]}]]></tab>
+      </file>
+      <file>
+        <entry file="file://$PROJECT_DIR$/src/test/testData/ConditionalOperator/ConditionalOperator.java">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="110">
+              <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+        <tab><![CDATA[{"tabTitle":"ConditionalOperator.java","foregroundColor":-2104859,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,80,10,31,102,105,108,101,84,121,112,101,115,47,106,97,118,97,79,117,116,115,105,100,101,83,111,117,114,99,101,46,115,118,103,18,24,101,120,112,117,105,47,102,105,108,101,84,121,112,101,115,47,106,97,118,97,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-11,-102,-33,91,48,0]}]]></tab>
+      </file>
+      <file>
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/InfixOperatorPrecedenceInspection.java">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="696">
+              <caret line="97" column="5" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+        <tab><![CDATA[{"tabTitle":"InfixOperatorPrecedenceInspection.java","foregroundColor":-9392385,"textAttributes":{"name":"a","children":[{"name":"option","attributes":{"name":"FOREGROUND","value":"70aeff"}}]},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,62,10,15,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-63,-37,-81,-57,4,48,0]}]]></tab>
+      </file>
+      <file>
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/ChangeOfLiteralEncodingInspection.java">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="88">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+        <tab><![CDATA[{"tabTitle":"ChangeOfLiteralEncodingInspection.java","foregroundColor":-2104859,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,62,10,15,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-63,-37,-81,-57,4,48,0]}]]></tab>
+      </file>
+      <file>
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/ArithmeticAsLogicInspection.java">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="88">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+        <tab><![CDATA[{"tabTitle":"ArithmeticAsLogicInspection.java","foregroundColor":-2104859,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,62,10,15,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-63,-37,-81,-57,4,48,0]}]]></tab>
+      </file>
+      <file>
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/ArithmeticAsLogic/ArithmeticAsLogicQuickFixTest.java">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="88">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+        <tab><![CDATA[{"tabTitle":"ArithmeticAsLogicQuickFixTest.java","foregroundColor":-2104859,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,62,10,15,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-63,-37,-81,-57,4,48,0]}]]></tab>
+      </file>
+      <file>
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/ArithmeticAsLogic/ArithmeticAsLogicInspectionTest.java">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="88">
+              <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+        <tab><![CDATA[{"tabTitle":"ArithmeticAsLogicInspectionTest.java","foregroundColor":-2104859,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,62,10,15,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,99,108,97,115,115,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-63,-37,-81,-57,4,48,0]}]]></tab>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary"><![CDATA[{
+  "data": {
+    "JAVA": {
+      "usageCount": 18,
+      "lastUsed": 1793296818801
+    }
+  }
+}]]></component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/InfixOperatorPrecedenceInspection.java" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LanguageUsageStatistics">
+    <language id="JAVA">
+      <summary usageCount="18" lastUsage="1793296818801" />
+    </language>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main/java}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main/java}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main/java/com/anon/aocrefactor}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main/java}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main/java/com/anon/aocrefactor}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main/java/com/anon/aocrefactor/inspection}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor/ArithmeticAsLogic}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor/InfixOperatorPrecedence}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor/LogicAsControlFlow}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor/PostIncrementDecrement}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData/ArithmeticAsLogic}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData/ConditionalOperator}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData/PostIncrementDecrement}" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+          <presentation>
+            <attributes />
+            <data iconPath="expui/toolwindows/project.svg" iconPlugin="com.intellij" isLeaf="false" text="aoc-refactor" />
+            <item name="aoc-refactor" type="b2602c69:ProjectViewProjectNode" />
+            <presentation>
+              <attributes>
+                <map>
+                  <entry key="filePath" value="$PROJECT_DIR$" />
+                </map>
+              </attributes>
+              <data iconPath="expui/nodes/module.svg" iconPlugin="com.intellij" isLeaf="false" text="Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA" />
+              <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.gradle" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/excludeRoot.svg" iconPlugin="com.intellij" isLeaf="false" text=".gradle" />
+                <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/.gradle}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.idea" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text=".idea" />
+                <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/.idea}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.intellijPlatform" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/excludeRoot.svg" iconPlugin="com.intellij" isLeaf="false" text=".intellijPlatform" />
+                <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/.intellijPlatform}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.run" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text=".run" />
+                <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/.run}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/build" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/excludeRoot.svg" iconPlugin="com.intellij" isLeaf="false" text="build" />
+                <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/build}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/gradle" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="gradle" />
+                <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/gradle}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/src" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="src" />
+                <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src}" type="462c0819:PsiDirectoryNode" />
+                <presentation>
+                  <attributes>
+                    <map>
+                      <entry key="filePath" value="$PROJECT_DIR$/src/main" />
+                    </map>
+                  </attributes>
+                  <data iconPath="expui/nodes/module.svg" iconPlugin="com.intellij" isLeaf="false" text="main" />
+                  <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/src/main/java" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/nodes/sourceRoot.svg" iconPlugin="com.intellij" isLeaf="false" text="java" />
+                    <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main/java}" type="462c0819:PsiDirectoryNode" />
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/src/main/java/com/anon/aocrefactor" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="com.anon.aocrefactor" />
+                      <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main/java/com/anon/aocrefactor}" type="462c0819:PsiDirectoryNode" />
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="inspection" />
+                        <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main/java/com/anon/aocrefactor/inspection}" type="462c0819:PsiDirectoryNode" />
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/ArithmeticAsLogicInspection.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="ArithmeticAsLogicInspection" />
+                          <item name="ArithmeticAsLogicInspection" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/ChangeOfLiteralEncodingInspection.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="ChangeOfLiteralEncodingInspection" />
+                          <item name="ChangeOfLiteralEncodingInspection" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/ConditionalOperatorInspection.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="ConditionalOperatorInspection" />
+                          <item name="ConditionalOperatorInspection" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/InfixOperatorPrecedenceInspection.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="InfixOperatorPrecedenceInspection" />
+                          <item name="InfixOperatorPrecedenceInspection" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/LogicAsControlFlowInspection.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="LogicAsControlFlowInspection" />
+                          <item name="LogicAsControlFlowInspection" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/OmittedCurlyBracesInspection.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="OmittedCurlyBracesInspection" />
+                          <item name="OmittedCurlyBracesInspection" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/PostIncrementDecrementInspection.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="PostIncrementDecrementInspection" />
+                          <item name="PostIncrementDecrementInspection" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/PreIncrementDecrementInspection.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="PreIncrementDecrementInspection" />
+                          <item name="PreIncrementDecrementInspection" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/TypeConversionInspection.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="TypeConversionInspection" />
+                          <item name="TypeConversionInspection" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/quickfix" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="quickfix" />
+                        <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main/java/com/anon/aocrefactor/quickfix}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/util" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="util" />
+                        <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main/java/com/anon/aocrefactor/util}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                    </presentation>
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/src/main/resources" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/nodes/resourcesRoot.svg" iconPlugin="com.intellij" isLeaf="false" text="resources" />
+                    <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/main/resources}" type="462c0819:PsiDirectoryNode" />
+                  </presentation>
+                </presentation>
+                <presentation>
+                  <attributes>
+                    <map>
+                      <entry key="filePath" value="$PROJECT_DIR$/src/test" />
+                    </map>
+                  </attributes>
+                  <data iconPath="expui/nodes/module.svg" iconPlugin="com.intellij" isLeaf="false" text="test" />
+                  <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test}" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/src/test/java" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/nodes/testRoot.svg" iconPlugin="com.intellij" isLeaf="false" text="java" />
+                    <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java}" type="462c0819:PsiDirectoryNode" />
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="com.anon.aocrefactor" />
+                      <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor}" type="462c0819:PsiDirectoryNode" />
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/ArithmeticAsLogic" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="ArithmeticAsLogic" />
+                        <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor/ArithmeticAsLogic}" type="462c0819:PsiDirectoryNode" />
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/ArithmeticAsLogic/ArithmeticAsLogicInspectionTest.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="ArithmeticAsLogicInspectionTest" />
+                          <item name="ArithmeticAsLogicInspectionTest" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/ArithmeticAsLogic/ArithmeticAsLogicQuickFixTest.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="ArithmeticAsLogicQuickFixTest" />
+                          <item name="ArithmeticAsLogicQuickFixTest" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/ChangeOfLiteralEncoding" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="ChangeOfLiteralEncoding" />
+                        <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor/ChangeOfLiteralEncoding}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/ConditionalOperator" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="ConditionalOperator" />
+                        <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor/ConditionalOperator}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/InfixOperatorPrecedence" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="InfixOperatorPrecedence" />
+                        <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor/InfixOperatorPrecedence}" type="462c0819:PsiDirectoryNode" />
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/InfixOperatorPrecedence/InfixOperatorPrecedenceInspectionTest.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="InfixOperatorPrecedenceInspectionTest" />
+                          <item name="InfixOperatorPrecedenceInspectionTest" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/InfixOperatorPrecedence/InfixOperatorPrecedenceQuickFixTest.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="InfixOperatorPrecedenceQuickFixTest" />
+                          <item name="InfixOperatorPrecedenceQuickFixTest" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/LogicAsControlFlow" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="LogicAsControlFlow" />
+                        <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor/LogicAsControlFlow}" type="462c0819:PsiDirectoryNode" />
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/LogicAsControlFlow/LogicAsControlFlowInspectionTest.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="LogicAsControlFlowInspectionTest" />
+                          <item name="LogicAsControlFlowInspectionTest" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/LogicAsControlFlow/LogicAsControlFlowQuickFixTest.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="LogicAsControlFlowQuickFixTest" />
+                          <item name="LogicAsControlFlowQuickFixTest" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/OmittedCurlyBraces" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="OmittedCurlyBraces" />
+                        <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor/OmittedCurlyBraces}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/PostIncrementDecrement" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="PostIncrementDecrement" />
+                        <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor/PostIncrementDecrement}" type="462c0819:PsiDirectoryNode" />
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/PostIncrementDecrement/PostIncrementDecrementInspectionTest.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="PostIncrementDecrementInspectionTest" />
+                          <item name="PostIncrementDecrementInspectionTest" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                        <presentation>
+                          <attributes>
+                            <map>
+                              <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/PostIncrementDecrement/PostIncrementDecrementQuickFixTest.java" />
+                            </map>
+                          </attributes>
+                          <data iconPath="expui/nodes/class.svg" iconPlugin="com.intellij" isLeaf="true" text="PostIncrementDecrementQuickFixTest" />
+                          <item name="PostIncrementDecrementQuickFixTest" type="1a9f42e2:ClassTreeNode" />
+                        </presentation>
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/PreIncrementDecrement" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="PreIncrementDecrement" />
+                        <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor/PreIncrementDecrement}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/TypeConversion" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="TypeConversion" />
+                        <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor/TypeConversion}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/util" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/nodes/package.svg" iconPlugin="com.intellij" isLeaf="false" text="util" />
+                        <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/java/com/anon/aocrefactor/util}" type="462c0819:PsiDirectoryNode" />
+                      </presentation>
+                    </presentation>
+                  </presentation>
+                  <presentation>
+                    <attributes>
+                      <map>
+                        <entry key="filePath" value="$PROJECT_DIR$/src/test/testData" />
+                      </map>
+                    </attributes>
+                    <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="testData" />
+                    <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData}" type="462c0819:PsiDirectoryNode" />
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/ArithmeticAsLogic" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="ArithmeticAsLogic" />
+                      <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData/ArithmeticAsLogic}" type="462c0819:PsiDirectoryNode" />
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/ArithmeticAsLogic/ArithmeticAsLogic.java" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/fileTypes/java.svg" iconPlugin="com.intellij" isLeaf="true" text="ArithmeticAsLogic.java" />
+                        <item name="ArithmeticAsLogic.java" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/ArithmeticAsLogic/ArithmeticAsLogicAfter.java" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/fileTypes/java.svg" iconPlugin="com.intellij" isLeaf="true" text="ArithmeticAsLogicAfter.java" />
+                        <item name="ArithmeticAsLogicAfter.java" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/ArithmeticAsLogic/NoWarning.java" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/fileTypes/java.svg" iconPlugin="com.intellij" isLeaf="true" text="NoWarning.java" />
+                        <item name="NoWarning.java" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                    </presentation>
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/ChangeOfLiteralEncoding" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="ChangeOfLiteralEncoding" />
+                      <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData/ChangeOfLiteralEncoding}" type="462c0819:PsiDirectoryNode" />
+                    </presentation>
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/ConditionalOperator" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="ConditionalOperator" />
+                      <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData/ConditionalOperator}" type="462c0819:PsiDirectoryNode" />
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/ConditionalOperator/ConditionalOperator.java" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/fileTypes/java.svg" iconPlugin="com.intellij" isLeaf="true" text="ConditionalOperator.java" />
+                        <item name="ConditionalOperator.java" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/ConditionalOperator/ConditionalOperatorAfter.java" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/fileTypes/java.svg" iconPlugin="com.intellij" isLeaf="true" text="ConditionalOperatorAfter.java" />
+                        <item name="ConditionalOperatorAfter.java" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/ConditionalOperator/NoWarning.java" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/fileTypes/java.svg" iconPlugin="com.intellij" isLeaf="true" text="NoWarning.java" />
+                        <item name="NoWarning.java" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                    </presentation>
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/InfixOperatorPrecedence" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="InfixOperatorPrecedence" />
+                      <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData/InfixOperatorPrecedence}" type="462c0819:PsiDirectoryNode" />
+                    </presentation>
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/LogicAsControlFlow" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="LogicAsControlFlow" />
+                      <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData/LogicAsControlFlow}" type="462c0819:PsiDirectoryNode" />
+                    </presentation>
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/OmittedCurlyBraces" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="OmittedCurlyBraces" />
+                      <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData/OmittedCurlyBraces}" type="462c0819:PsiDirectoryNode" />
+                    </presentation>
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/PostIncrementDecrement" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="PostIncrementDecrement" />
+                      <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData/PostIncrementDecrement}" type="462c0819:PsiDirectoryNode" />
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/PostIncrementDecrement/NoFix.java" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/fileTypes/java.svg" iconPlugin="com.intellij" isLeaf="true" text="NoFix.java" />
+                        <item name="NoFix.java" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/PostIncrementDecrement/NoWarning.java" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/fileTypes/java.svg" iconPlugin="com.intellij" isLeaf="true" text="NoWarning.java" />
+                        <item name="NoWarning.java" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/PostIncrementDecrement/PostIncrementDecrement.java" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/fileTypes/java.svg" iconPlugin="com.intellij" isLeaf="true" text="PostIncrementDecrement.java" />
+                        <item name="PostIncrementDecrement.java" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                      <presentation>
+                        <attributes>
+                          <map>
+                            <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/PostIncrementDecrement/PostIncrementDecrementAfter.java" />
+                          </map>
+                        </attributes>
+                        <data iconPath="expui/fileTypes/java.svg" iconPlugin="com.intellij" isLeaf="true" text="PostIncrementDecrementAfter.java" />
+                        <item name="PostIncrementDecrementAfter.java" type="ab9368bb:PsiFileNode" />
+                      </presentation>
+                    </presentation>
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/PreIncrementDecrement" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="PreIncrementDecrement" />
+                      <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData/PreIncrementDecrement}" type="462c0819:PsiDirectoryNode" />
+                    </presentation>
+                    <presentation>
+                      <attributes>
+                        <map>
+                          <entry key="filePath" value="$PROJECT_DIR$/src/test/testData/TypeConversion" />
+                        </map>
+                      </attributes>
+                      <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="TypeConversion" />
+                      <item name="dir{file:///home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/src/test/testData/TypeConversion}" type="462c0819:PsiDirectoryNode" />
+                    </presentation>
+                  </presentation>
+                </presentation>
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.gitattributes" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/text.svg" iconPlugin="com.intellij" isLeaf="true" text=".gitattributes" />
+                <item name=".gitattributes" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/.gitignore" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/ignored.svg" iconPlugin="com.intellij" isLeaf="true" text=".gitignore" />
+                <item name=".gitignore" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/build.gradle.kts" />
+                  </map>
+                </attributes>
+                <data iconPath="org/jetbrains/kotlin/idea/icons/expui/kotlinGradleScript.svg" iconPlugin="org.jetbrains.kotlin" isLeaf="true" text="build.gradle.kts" />
+                <item name="build.gradle.kts" type="24436e51:KtFileTreeNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/gradle.properties" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/properties.svg" iconPlugin="com.intellij" isLeaf="true" text="gradle.properties" />
+                <item name="gradle.properties" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/gradlew" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/shell.svg" iconPlugin="com.intellij" isLeaf="true" text="gradlew" />
+                <item name="gradlew" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/gradlew.bat" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/text.svg" iconPlugin="com.intellij" isLeaf="true" text="gradlew.bat" />
+                <item name="gradlew.bat" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/LICENSE" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/fileTypes/text.svg" iconPlugin="com.intellij" isLeaf="true" text="LICENSE" />
+                <item name="LICENSE" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/README.md" />
+                  </map>
+                </attributes>
+                <data iconPath="icons/expui/markdown.svg" iconPlugin="org.intellij.plugins.markdown" isLeaf="true" text="README.md" />
+                <item name="README.md" type="ab9368bb:PsiFileNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/settings.gradle.kts" />
+                  </map>
+                </attributes>
+                <data iconPath="org/jetbrains/kotlin/idea/icons/expui/kotlinGradleScript.svg" iconPlugin="org.jetbrains.kotlin" isLeaf="true" text="settings.gradle.kts" />
+                <item name="settings.gradle.kts" type="24436e51:KtFileTreeNode" />
+              </presentation>
+            </presentation>
+            <presentation>
+              <attributes />
+              <data iconPath="expui/nodes/library.svg" iconPlugin="com.intellij" isLeaf="false" text="External Libraries" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </presentation>
+            <presentation>
+              <attributes />
+              <data iconPath="expui/fileTypes/scratches.svg" iconPlugin="com.intellij" isLeaf="false" text="Scratches and Consoles" />
+              <item name="Scratches and Consoles" type="b85a3e1f:ScratchTreeStructureProvider$MyProjectNode" />
+            </presentation>
+          </presentation>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="ToolWindowManager">
+    <layoutV2>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33035713" />
+      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Problems" order="1" />
+      <window_info anchor="bottom" id="Problems View" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="bottom" id="Build" order="4" />
+      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
+      <window_info anchor="right" id="Database" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.25" />
+      <unified_weights left="0.33035713" />
+    </layoutV2>
+    <recentWindows>
+      <value>Project</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-220" y="162" width="1451" height="768" key="#com.intellij.internal.psiView.PsiViewerDialog" timestamp="1793298305467">
+      <screen x="0" y="162" width="1366" height="768" />
+    </state>
+    <state x="-220" y="162" width="1451" height="768" key="#com.intellij.internal.psiView.PsiViewerDialog/1366.0.1920.1080/0.162.1366.768@0.162.1366.768" timestamp="1793298305467" />
+    <state x="1634" y="32" width="1451" height="958" key="#com.intellij.internal.psiView.PsiViewerDialog/1366.0.1920.1080/0.162.1366.768@1366.0.1920.1080" timestamp="1793296806660" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/testData/PostIncrementDecrement/NoWarning.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testData/PostIncrementDecrement/NoFix.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/LogicAsControlFlow/LogicAsControlFlowInspectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/LogicAsControlFlow/LogicAsControlFlowQuickFixTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/InfixOperatorPrecedence/InfixOperatorPrecedenceQuickFixTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/InfixOperatorPrecedence/InfixOperatorPrecedenceInspectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/PostIncrementDecrement/PostIncrementDecrementInspectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1900">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testData/PostIncrementDecrement/PostIncrementDecrementAfter.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testData/PostIncrementDecrement/PostIncrementDecrement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testData/ConditionalOperator/ConditionalOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testData/ConditionalOperator/ConditionalOperatorAfter.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/InfixOperatorPrecedenceInspection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="97" column="5" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/ChangeOfLiteralEncodingInspection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/anon/aocrefactor/inspection/ArithmeticAsLogicInspection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/ArithmeticAsLogic/ArithmeticAsLogicQuickFixTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/anon/aocrefactor/ArithmeticAsLogic/ArithmeticAsLogicInspectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testData/ArithmeticAsLogic/ArithmeticAsLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testData/ArithmeticAsLogic/ArithmeticAsLogicAfter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

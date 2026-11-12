@@ -1,0 +1,77 @@
+<project version="4">
+  <component name="ExternalSystemProjectTracker"><![CDATA[{
+  "projectData": {
+    "GRADLE": {
+      "/home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA": {
+        "settingsTracker": {
+          "isDirty": false,
+          "settingsFiles": {
+            "/home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/gradle.properties": 1790265866,
+            "/home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/gradle/wrapper/gradle-wrapper.properties": 3681183721,
+            "/home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/settings.gradle.kts": 857192842,
+            "/home/psyduck/Documentos/Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA/build.gradle.kts": 628043727
+          }
+        }
+      }
+    }
+  }
+}]]></component>
+  <component name="GradleLocalSettings">
+    <option name="myGradleHomes">
+      <map>
+        <entry key="$PROJECT_DIR$" value="$USER_HOME$/.gradle/wrapper/dists/gradle-9.0.0-bin/d6wjpkvcgsg3oed0qlfss3wgl/gradle-9.0.0" />
+      </map>
+    </option>
+    <option name="myGradleVersions">
+      <map>
+        <entry key="$PROJECT_DIR$" value="9.0.0" />
+      </map>
+    </option>
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="aoc-refactor" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="aoc-refactor" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectDependenciesModelState">
+    <option name="PROJECT_STATE" value="[{&quot;type&quot;:&quot;maven&quot;,&quot;namespace&quot;:&quot;org.junit.jupiter&quot;,&quot;name&quot;:&quot;junit-jupiter&quot;,&quot;version&quot;:{&quot;value&quot;:&quot;5.10.2&quot;,&quot;releaseDate&quot;:null},&quot;qualifiers&quot;:null,&quot;subpath&quot;:null,&quot;releaseDate&quot;:null,&quot;coordinates&quot;:&quot;maven:org.junit.jupiter:junit-jupiter:5.10.2:null:null&quot;,&quot;searchCoordinates&quot;:&quot;org.junit.jupiter:junit-jupiter:5.10.2&quot;,&quot;searchKey&quot;:&quot;b6f8219b0e6a0c19b9b833ccf332e10553c958154f8833f67470ffdc0a40c067&quot;,&quot;humanReadableCoordinates&quot;:&quot;maven:org.junit.jupiter:junit-jupiter:5.10.2&quot;},{&quot;type&quot;:&quot;maven&quot;,&quot;namespace&quot;:&quot;junit&quot;,&quot;name&quot;:&quot;junit&quot;,&quot;version&quot;:{&quot;value&quot;:&quot;4.13.2&quot;,&quot;releaseDate&quot;:null},&quot;qualifiers&quot;:null,&quot;subpath&quot;:null,&quot;releaseDate&quot;:null,&quot;coordinates&quot;:&quot;maven:junit:junit:4.13.2:null:null&quot;,&quot;searchCoordinates&quot;:&quot;junit:junit:4.13.2&quot;,&quot;searchKey&quot;:&quot;eb799e5df403688c2fb89ee287eca945fb92b74e35c22abf741bdfaaf5692347&quot;,&quot;humanReadableCoordinates&quot;:&quot;maven:junit:junit:4.13.2&quot;}]" />
+  </component>
+  <component name="RestoreUpdateTree"><![CDATA[{}]]></component>
+  <component name="VcsDirectoryMappingCache">
+    <option name="roots">
+      <set>
+        <option value="$PROJECT_DIR$" />
+      </set>
+    </option>
+    <option name="vcsName" value="Git" />
+  </component>
+  <component name="sourceFolderManager">
+    <sourceFolders>
+      <SourceFolderModelState>
+        <option name="moduleName" value="aoc-refactor.test" />
+        <option name="type" value="TEST_RESOURCE" />
+        <option name="url" value="file://$PROJECT_DIR$/src/test/resources" />
+      </SourceFolderModelState>
+    </sourceFolders>
+  </component>
+</project>

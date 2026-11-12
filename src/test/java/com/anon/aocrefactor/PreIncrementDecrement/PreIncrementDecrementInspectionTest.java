@@ -58,6 +58,7 @@ class PreIncrementDecrementInspectionTest extends AtomTestBase {
             Map.entry("incrementAsRightOperand", List.of(fix(INC))),
             Map.entry("incrementAsArgument", List.of(fix(INC))),
             Map.entry("incrementInIfCondition", List.of(fix(INC))),
+            Map.entry("incrementInSwitchSelector", List.of(fix(INC))),
             Map.entry("incrementInFirstOperandOfAnd", List.of(fix(INC))),
             Map.entry("incrementInTernaryCondition", List.of(fix(INC))),
             Map.entry("twoSeparateStatements", List.of(fix(INC), fix(DEC))),
@@ -65,7 +66,13 @@ class PreIncrementDecrementInspectionTest extends AtomTestBase {
             Map.entry("fieldWithThis", List.of(fix(INC))),
             Map.entry("staticFieldWithClassName", List.of(fix(DEC))),
             Map.entry("fieldInIfCondition", List.of(fix(INC))),
-            Map.entry("fieldAsArrayIndex", List.of(fix(INC)))
+            Map.entry("fieldAsArrayIndex", List.of(fix(INC))),
+            Map.entry("fieldInAssignment", List.of(fix(INC))),
+            Map.entry("fieldInMethodCall", List.of(fix(INC))),
+            Map.entry("operandQualifiedByOtherObject", List.of(fix(INC))),
+            Map.entry("ifBodyWithoutBraces", List.of(fix(INC))),
+            Map.entry("elseBodyWithoutBraces", List.of(fix(INC))),
+            Map.entry("loopBodyWithoutBraces", List.of(fix(INC)))
     );
 
     /** Avisos sem quick fix esperados para cada método de NoFix.java. */
@@ -79,10 +86,7 @@ class PreIncrementDecrementInspectionTest extends AtomTestBase {
             Map.entry("forUpdate", List.of(noFix(INC))),
             Map.entry("assertStatement", List.of(noFix(INC))),
             Map.entry("localDeclaredInSameStatement", List.of(noFix(INC))),
-            Map.entry("arrayElementOperand", List.of(noFix(INC))),
-            Map.entry("operandQualifiedByOtherObject", List.of(noFix(INC))),
-            Map.entry("fieldInAssignment", List.of(noFix(INC))),
-            Map.entry("fieldInMethodCall", List.of(noFix(INC)))
+            Map.entry("arrayElementOperand", List.of(noFix(INC)))
     );
 
     PreIncrementDecrementInspectionTest() {

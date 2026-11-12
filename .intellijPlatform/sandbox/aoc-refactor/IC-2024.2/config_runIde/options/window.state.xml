@@ -1,0 +1,14 @@
+<application>
+  <component name="DimensionService">
+    <size key="#com.intellij.internal.psiView.PsiViewerDialog.1366.0.1920.1080" width="800" height="600" />
+  </component>
+  <component name="WindowManager">
+    <frame x="0" y="34" width="1400" height="1000" />
+  </component>
+  <component name="WindowStateApplicationService">
+    <state x="2109" y="312" width="424" height="495" key="FileChooserDialogImpl" timestamp="1793292038154">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2109" y="312" width="424" height="495" key="FileChooserDialogImpl/1366.0.1920.1080/0.162.1366.768" timestamp="1793292038154" />
+  </component>
+</application>

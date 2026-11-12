@@ -62,7 +62,15 @@ class PostIncrementDecrementInspectionTest extends AtomTestBase {
             Map.entry("longVariable", List.of(fix(INC))),
             Map.entry("tempNameAlreadyInUse", List.of(fix(INC))),
             Map.entry("fieldAsArrayIndex", List.of(fix(INC))),
-            Map.entry("fieldInIfCondition", List.of(fix(INC)))
+            Map.entry("fieldInIfCondition", List.of(fix(INC))),
+            Map.entry("addBlock", List.of(fix(INC))),
+            Map.entry("fieldInAssignment", List.of(fix(INC))),
+            Map.entry("fieldInMethodCall", List.of(fix(INC))),
+            Map.entry("fieldWithOtherIncrement", List.of(fix(INC))),
+            Map.entry("fieldAfterMethodCall", List.of(fix(INC))),
+            Map.entry("fieldAfterArrayRead", List.of(fix(INC))),
+            Map.entry("fieldAfterOtherIncrement", List.of(fix(INC))),
+            Map.entry("operandQualifiedByOtherObject", List.of(fix(INC)))
     );
 
     /** Mensagens esperadas para cada método de NoFix.java. */
@@ -72,11 +80,7 @@ class PostIncrementDecrementInspectionTest extends AtomTestBase {
             Map.entry("forCondition", List.of(noFix(INC))),
             Map.entry("forInitialization", List.of(noFix(INC))),
             Map.entry("forUpdate", List.of(noFix(INC))),
-            Map.entry("arrayElementOperand", List.of(noFix(INC))),
-            Map.entry("operandQualifiedByOtherObject", List.of(noFix(INC))),
-            Map.entry("fieldInAssignment", List.of(noFix(INC))),
-            Map.entry("fieldInMethodCall", List.of(noFix(INC))),
-            Map.entry("fieldWithOtherIncrement", List.of(noFix(INC)))
+            Map.entry("arrayElementOperand", List.of(noFix(INC)))
     );
 
     PostIncrementDecrementInspectionTest() {
@@ -99,7 +103,7 @@ class PostIncrementDecrementInspectionTest extends AtomTestBase {
         assertTrue(warnings().isEmpty());
     }
 
-    /** Casos seguros: aviso com a mensagem "Consider separating the operation." */
+    /** Casos seguros: aviso sem a mensagem "No automatic fix". */
     @ParameterizedTest(name = "{0}")
     @MethodSource("fixableWarnings")
     void reportsFixableWarningsInMethod(String methodName, List<String> expectedMessages) {

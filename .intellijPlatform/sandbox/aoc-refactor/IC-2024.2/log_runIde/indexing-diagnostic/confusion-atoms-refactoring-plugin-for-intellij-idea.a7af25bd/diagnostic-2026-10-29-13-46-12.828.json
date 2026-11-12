@@ -1,0 +1,95 @@
+{
+  "appInfo" : {
+    "build" : "242.20224.300",
+    "buildDate" : "2024-08-06T20:58:00Z[UTC]",
+    "productCode" : "IC",
+    "generated" : "2026-10-29T16:46:12.82897607Z",
+    "os" : "Linux 7.2.10-arch1-1",
+    "runtime" : "JetBrains s.r.o. 21.0.3 21.0.3+13-b509.4"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 12,
+    "maxNumberOfIndexingThreads" : 11,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "aoc-refactor",
+    "times" : {
+      "scanningReason" : "changes in: \"Module 'Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA.main' (all roots)\", \"Module 'Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA.test' (all roots)\", \"JDK 21 /home/psyduck/.jdks/ms-21.0.12.1\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 1,
+      "creatingIteratorsTime" : 0,
+      "concurrentHandlingWallTimeWithoutPauses" : 0,
+      "concurrentHandlingWallTimeWithPauses" : 0,
+      "concurrentHandlingSumOfThreadTimesWithPauses" : 1099670033,
+      "concurrentIterationAndScannersApplicationSumOfThreadTimesWithPauses" : 83107062,
+      "concurrentFileCheckSumOfThreadTimesWithPauses" : 1015843369,
+      "delayedPushPropertiesStageTime" : 0,
+      "indexExtensionsTime" : 479926,
+      "dumbModeStart" : "2026-10-29T16:46:11.749565755Z",
+      "dumbWallTimeWithPauses" : 1077354399,
+      "dumbWallTimeWithoutPauses" : 1077354399,
+      "updatingStart" : "2026-10-29T16:46:11.749013888Z",
+      "updatingEnd" : "2026-10-29T16:46:12.826920154Z",
+      "totalWallTimeWithPauses" : 1077919562,
+      "wallTimeOnPause" : 295396,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 1077624166
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 3,
+      "numberOfScannedFiles" : 44158,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 41
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "JDK 21 /home/psyduck/.jdks/ms-21.0.12.1",
+      "numberOfScannedFiles" : 44077,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 0,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 937576159,
+      "totalOneThreadTimeWithPauses" : 1075035949,
+      "iterationAndScannersApplicationTime" : 81026158,
+      "filesCheckTime" : 993804935,
+      "timeProcessingUpToDateFiles" : 291777549,
+      "timeUpdatingContentLessIndexes" : 0,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 0,
+      "roots" : [ ]
+    }, {
+      "providerName" : "Module 'Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA.test' (all roots)",
+      "numberOfScannedFiles" : 58,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 20,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 4205286,
+      "totalOneThreadTimeWithPauses" : 13182319,
+      "iterationAndScannersApplicationTime" : 1130176,
+      "filesCheckTime" : 11840847,
+      "timeProcessingUpToDateFiles" : 776296,
+      "timeUpdatingContentLessIndexes" : 0,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 241214,
+      "roots" : [ ]
+    }, {
+      "providerName" : "Module 'Confusion-Atoms-Refactoring-Plugin-for-IntelliJ-IDEA.main' (all roots)",
+      "numberOfScannedFiles" : 23,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 21,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 2865578,
+      "totalOneThreadTimeWithPauses" : 11451765,
+      "iterationAndScannersApplicationTime" : 950728,
+      "filesCheckTime" : 10197587,
+      "timeProcessingUpToDateFiles" : 340423,
+      "timeUpdatingContentLessIndexes" : 0,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 238712,
+      "roots" : [ ]
+    } ]
+  }
+}

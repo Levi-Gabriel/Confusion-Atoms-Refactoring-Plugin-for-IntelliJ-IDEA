@@ -6,6 +6,13 @@ public class PostIncrementDecrementAfter {
     int count;
     static int total;
     int[] values = new int[10];
+    byte[][] blocks = new byte[10][];
+    int blockCount;
+    Point point = new Point();
+
+    static class Point {
+        int x;
+    }
 
     // after
 
@@ -49,6 +56,11 @@ public class PostIncrementDecrementAfter {
         b += 1;
         c = d;
         d -= 1;
+    }
+
+    void operandQualifiedByOtherObject() {
+        int a = point.x;
+        point.x += 1;
     }
 
     // TEMP
@@ -156,5 +168,52 @@ public class PostIncrementDecrementAfter {
         if (oldCount > 10) {
             return;
         }
+    }
+
+    void addBlock(byte[] block) {
+        expandIfNecessary(blockCount + 1);
+        int oldBlockCount = blockCount;
+        blockCount += 1;
+        blocks[oldBlockCount] = block;
+    }
+
+    void fieldInAssignment(int a) {
+        a = count;
+        count += 1;
+    }
+
+    void fieldInMethodCall() {
+        int oldCount = count;
+        count += 1;
+        int a = Math.abs(oldCount);
+    }
+
+    void fieldWithOtherIncrement(int other) {
+        int oldCount = count;
+        count += 1;
+        int a = oldCount + --other;
+    }
+
+    void fieldAfterMethodCall() {
+        int a = compute() + count;
+        count += 1;
+    }
+
+    void fieldAfterArrayRead() {
+        int a = values[0] + count;
+        count += 1;
+    }
+
+    void fieldAfterOtherIncrement(int other) {
+        int oldCount = count;
+        count += 1;
+        int a = --other + oldCount;
+    }
+
+    int compute() {
+        return 0;
+    }
+
+    void expandIfNecessary(int size) {
     }
 }

@@ -1,0 +1,155 @@
+<component name="libraryTable">
+  <library name="Gradle: com.jetbrains.intellij.java:java-test-framework:242.20224.300" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="com.jetbrains.intellij.java" artifactId="java-test-framework" version="242.20224.300" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.java/java-test-framework/242.20224.300/b15ad61096570eaa8bf5d861dbf46d43aba77eb7/java-test-framework-242.20224.300.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.java/java-test-framework/242.20224.300/82806b8ed3b6e9af3f487142976dbf4e7e454c17/java-test-framework-242.20224.300-sources.jar!/" />
+    </SOURCES>
+  </library>
+  <library name="Gradle: com.jetbrains.intellij.platform:test-framework-common:242.20224.300" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="com.jetbrains.intellij.platform" artifactId="test-framework-common" version="242.20224.300" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.platform/test-framework-common/242.20224.300/61c04be897a6b43978d3ba8f8237cb5957b62793/test-framework-common-242.20224.300.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.platform/test-framework-common/242.20224.300/28acd31fd4781556f2a1f41a257c4b117a42ffaa/test-framework-common-242.20224.300-sources.jar!/" />
+    </SOURCES>
+  </library>
+  <library name="Gradle: com.jetbrains.intellij.platform:test-framework-core:242.20224.300" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="com.jetbrains.intellij.platform" artifactId="test-framework-core" version="242.20224.300" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.platform/test-framework-core/242.20224.300/59ca5d8e0169c527c0871f113d94216d7cc6e967/test-framework-core-242.20224.300.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.platform/test-framework-core/242.20224.300/4e03cc5778107a27c2b69aaa9c0cfd8fc7098498/test-framework-core-242.20224.300-sources.jar!/" />
+    </SOURCES>
+  </library>
+  <library name="Gradle: com.jetbrains.intellij.platform:test-framework:242.20224.300" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="com.jetbrains.intellij.platform" artifactId="test-framework" version="242.20224.300" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.platform/test-framework/242.20224.300/10122e4297cbe6ad767527ecefbf9ba633bcba4e/test-framework-242.20224.300.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.platform/test-framework/242.20224.300/5a6f3b5bd02a170ffbabe2b7fc1e582dd2dfaecf/test-framework-242.20224.300-sources.jar!/" />
+    </SOURCES>
+  </library>
+  <library name="Gradle: junit:junit:4.13.2" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="junit" artifactId="junit" version="4.13.2" />
+    <ANNOTATIONS>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/externalAnnotations/junit/junit/4.12-an1/junit-4.12-an1-annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12/junit-4.13.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/33987872a811fe4d4001ed494b07854822257f42/junit-4.13.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+  <library name="Gradle: org.apiguardian:apiguardian-api:1.1.2" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="org.apiguardian" artifactId="apiguardian-api" version="1.1.2" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/a231e0d844d2721b0fa1b238006d15c6ded6842a/apiguardian-api-1.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/e0787a997746ac32639e0bf3cb27af8dce8a3428/apiguardian-api-1.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+  <library name="Gradle: org.hamcrest:hamcrest-core:1.3" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="org.hamcrest" artifactId="hamcrest-core" version="1.3" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+  <library name="Gradle: org.junit.jupiter:junit-jupiter-api:5.10.2" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="org.junit.jupiter" artifactId="junit-jupiter-api" version="5.10.2" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.10.2/fb55d6e2bce173f35fd28422e7975539621055ef/junit-jupiter-api-5.10.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.10.2/b281dbb5921ce56b37b6e07a2502f663ca6c8db6/junit-jupiter-api-5.10.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+  <library name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.10.2" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="org.junit.jupiter" artifactId="junit-jupiter-engine" version="5.10.2" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.10.2/f1f8fe97bd58e85569205f071274d459c2c4f8cd/junit-jupiter-engine-5.10.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.10.2/624f71a8d76185f2ac8d234c686bbdab0bd28ae0/junit-jupiter-engine-5.10.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+  <library name="Gradle: org.junit.jupiter:junit-jupiter-params:5.10.2" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="org.junit.jupiter" artifactId="junit-jupiter-params" version="5.10.2" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.10.2/359132c82a9d3fa87a325db6edd33b5fdc67a3d8/junit-jupiter-params-5.10.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.10.2/1add8e4310a408675f46eae8acafe6b2b72232e5/junit-jupiter-params-5.10.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+  <library name="Gradle: org.junit.jupiter:junit-jupiter:5.10.2" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="org.junit.jupiter" artifactId="junit-jupiter" version="5.10.2" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.10.2/831c0b86ddc2ce38391c5b81ea662b0cfdc02cce/junit-jupiter-5.10.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.10.2/4e79ee610aff59d79b5f229252ded392b7d48fd1/junit-jupiter-5.10.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+  <library name="Gradle: org.junit.platform:junit-platform-commons:1.10.2" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="org.junit.platform" artifactId="junit-platform-commons" version="1.10.2" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.10.2/3197154a1f0c88da46c47a9ca27611ac7ec5d797/junit-platform-commons-1.10.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.10.2/513097c1d045c39db2fa42a54f830d4358936dc3/junit-platform-commons-1.10.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+  <library name="Gradle: org.junit.platform:junit-platform-engine:1.10.2" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="org.junit.platform" artifactId="junit-platform-engine" version="1.10.2" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.10.2/d53bb4e0ce7f211a498705783440614bfaf0df2e/junit-platform-engine-1.10.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.10.2/886c197f5fcfe9eaf0d1dde20aa1bd3abd653f44/junit-platform-engine-1.10.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+  <library name="Gradle: org.junit.platform:junit-platform-launcher:1.10.2" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="org.junit.platform" artifactId="junit-platform-launcher" version="1.10.2" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.10.2/8125dd29e847ca274dd1a7a9ca54859acc284cb3/junit-platform-launcher-1.10.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.10.2/cab5a912975af7dc5d195970f8f1ca27f5caf35a/junit-platform-launcher-1.10.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+  <library name="Gradle: org.opentest4j:opentest4j:1.3.0" type="java-imported" __external-system-id="GRADLE">
+    <properties groupId="org.opentest4j" artifactId="opentest4j" version="1.3.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.3.0/152ea56b3a72f655d4fd677fc0ef2596c3dd5e6e/opentest4j-1.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.3.0/afb8ff23cffb021c56f333953aebfe6e8818568e/opentest4j-1.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

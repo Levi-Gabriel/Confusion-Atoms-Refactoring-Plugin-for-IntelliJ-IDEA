@@ -2,18 +2,6 @@ package PostIncrementDecrement;
 
 public class NoFix {
 
-    int count;
-    int[] values = new int[10];
-    Point point = new Point();
-
-    static class Point {
-        int x;
-    }
-
-    interface IntSource {
-        int get();
-    }
-
     //evaluated more than once / cannot be moved
 
     void whileCondition(int i) {
@@ -46,23 +34,5 @@ public class NoFix {
 
     void arrayElementOperand(int[] arr) {
         int a = arr[0]++;
-    }
-
-    void operandQualifiedByOtherObject() {
-        int a = point.x++;
-    }
-
-    // field with possible side effects
-
-    void fieldInAssignment(int a) {
-        a = count++;
-    }
-
-    void fieldInMethodCall() {
-        int a = Math.abs(count++);
-    }
-
-    void fieldWithOtherIncrement(int other) {
-        int a = count++ + --other;
     }
 }

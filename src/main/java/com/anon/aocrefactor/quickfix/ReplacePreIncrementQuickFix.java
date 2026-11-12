@@ -87,7 +87,9 @@ public class ReplacePreIncrementQuickFix implements LocalQuickFix {
 
         // for (init; cond; update): init/update statements cannot be moved.
         if (stmt.getParent() instanceof PsiForStatement f) {
-            if ((f.getInitialization() == stmt || f.getUpdate() == stmt)) {
+            if (f.getInitialization() == stmt) {
+                return null;
+            } else if (f.getUpdate() == stmt) {
                 return null;
             }
         }
@@ -113,10 +115,8 @@ public class ReplacePreIncrementQuickFix implements LocalQuickFix {
                 .count();
         if (uses != 1) return null;
 
-        // 6. A field can be observed by anything evaluated in the same statement
-        //    (method calls, constructors, assignments, other ++/--). Locals cannot.
         if (!isLocal) {
-            if (hasSideEffects(scope, expr)) {
+            if (hasCallBefore(scope, expr)) {
                 return null;
             }
         }
@@ -124,22 +124,30 @@ public class ReplacePreIncrementQuickFix implements LocalQuickFix {
         return new Plan(stmt, ref.getText());
     }
 
-    /** Accepts no qualifier, "this" / "Outer.this", or a class name (static field). */
+    /**
+     * Accepts no qualifier, "this" / "Outer.this", a class name (static field), or a chain of
+     * plain variable/field references ("point", "this.point", "a.b"). Anything with a call or
+     * other computation in the chain ("getPoint().x", "arr[i].x") is rejected, because the
+     * qualifier would be evaluated twice.
+     */
     private static boolean isPlainQualifier(@Nullable PsiExpression qualifier) {
         if (qualifier == null) return true;
         if (qualifier instanceof PsiThisExpression) return true;
         if (!(qualifier instanceof PsiReferenceExpression q)) return false;
-        return q.resolve() instanceof PsiClass;
+        PsiElement target = q.resolve();
+        if (target instanceof PsiClass) return true;
+        if (target instanceof PsiVariable) return isPlainQualifier(q.getQualifierExpression());
+        return false;
     }
 
-    private static boolean hasSideEffects(@NotNull PsiElement scope, @NotNull PsiPrefixExpression self) {
-        if (!PsiTreeUtil.findChildrenOfAnyType(scope,
-                PsiCallExpression.class, PsiAssignmentExpression.class).isEmpty()) {
-            return true;
-        }
-        return PsiTreeUtil.findChildrenOfType(scope, PsiUnaryExpression.class).stream()
-                .filter(u -> u != self)
-                .anyMatch(u -> OperatorUtils.isIncrementOrDecrement(u.getOperationTokenType()));
+    /**
+     * True if a method call / constructor call finishes evaluating before {@code self} starts.
+     * Java evaluates left to right, so textual order is evaluation order.
+     */
+    private static boolean hasCallBefore(@NotNull PsiElement scope, @NotNull PsiPrefixExpression self) {
+        int start = self.getTextRange().getStartOffset();
+        return PsiTreeUtil.findChildrenOfType(scope, PsiCallExpression.class).stream()
+                .anyMatch(call -> call.getTextRange().getEndOffset() <= start);
     }
 
     @Override
@@ -155,7 +163,12 @@ public class ReplacePreIncrementQuickFix implements LocalQuickFix {
         PsiElementFactory factory = JavaPsiFacade.getElementFactory(project);
         PsiStatement stmt = plan.statement();
         String name = plan.operandText();   // "count", "this.count", "Counter.count"
-        String op = prefix.getOperationTokenType() == JavaTokenType.PLUSPLUS ? "+=" : "-=";
+        String op;
+        if (prefix.getOperationTokenType() == JavaTokenType.PLUSPLUS) {
+            op = "+=";
+        } else {
+            op = "-=";
+        }
 
         // "b += 1;" instead of "++b;" so the refactored code no longer contains the atom.
         PsiStatement incStatement = factory.createStatementFromText(name + " " + op + " 1;", stmt);

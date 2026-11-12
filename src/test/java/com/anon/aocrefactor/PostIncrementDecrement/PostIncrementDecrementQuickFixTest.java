@@ -9,6 +9,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -26,9 +27,13 @@ class PostIncrementDecrementQuickFixTest extends AtomTestBase {
         super(ATOM, new PostIncrementDecrementInspection(), HighlightSeverity.WEAK_WARNING);
     }
 
-    /** Um caso de teste por método declarado em PostIncrementDecrement.java. */
+    /** Métodos auxiliares de PostIncrementDecrement.java: não têm "++"/"--", então não geram aviso. */
+    private static final Set<String> HELPER_METHODS = Set.of("compute", "expandIfNecessary");
+
+    /** Um caso de teste por método declarado em PostIncrementDecrement.java (exceto os auxiliares). */
     static Stream<String> methodNames() {
-        return AtomTestUtil.methodNames(ATOM, BEFORE);
+        return AtomTestUtil.methodNames(ATOM, BEFORE)
+                .filter(name -> !HELPER_METHODS.contains(name));
     }
 
     /** Um caso de teste por método declarado em NoFix.java. */
